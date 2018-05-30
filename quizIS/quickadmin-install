@@ -1,0 +1,9 @@
+<?php
+/**
+ * We are simply calling the commands you normally would.
+ */
+
+exec("composer install");
+
+
+exec("php artisan key:generate");

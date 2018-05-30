@@ -26,7 +26,7 @@
                 </div>
             </div>
          
-    <?php echo Form::submit('Buscar', ['class' => 'btn btn-success']); ?>
+    <?php echo Form::submit(trans('quickadmin.save'), ['class' => 'btn btn-danger']); ?>
 
     <?php echo Form::close(); ?>
 
