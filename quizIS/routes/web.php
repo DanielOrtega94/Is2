@@ -44,7 +44,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('questions_options_mass_destroy', ['uses' => 'QuestionsOptionsController@massDestroy', 'as' => 'questions_options.mass_destroy']);
     Route::resource('results', 'ResultsController');
     Route::post('results_mass_destroy', ['uses' => 'ResultsController@massDestroy', 'as' => 'results.mass_destroy']);
-        Route::resource('empresas','EmpresaController');
+    Route::resource('empresas','EmpresaController');
+    Route::resource('miempresa','MiempresaController');
     
     Route::resource('etapas','EtapaController');
     Route::post('etapas_mass_destroy', ['uses' => 'EtapaController@massDestroy', 'as' => 'etapas.mass_destroy']);

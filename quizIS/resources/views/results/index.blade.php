@@ -42,6 +42,16 @@
                     @endif
                 </tbody>
             </table>
+         <table>
+            <tr>
+
+            <th>'TITULO'</th>
+            </tr>
+            <td>'NOMBRE' </td>
+         </table>
+
         </div>
     </div>
 @stop
+
+

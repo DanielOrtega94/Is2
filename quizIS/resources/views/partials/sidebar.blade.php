@@ -20,8 +20,26 @@
                     <span class="title">@lang('quickadmin.results.title')</span>
                 </a>
             </li>
+            <li class="{{ $request->segment(1) == 'miempresa' ? 'active' : '' }}">
+                <a href="{{ route('miempresa.index') }}">
+                    <i class="fa fa-check"></i>
+                    <span class="title">@lang('quickadmin.empresa.title1')</span>
+                </a>
+            </li>
+
+            
 
             @if(Auth::user()->isAdmin())
+            <li class="{{ $request->segment(1) == 'empresas' ? 'active' : '' }}">
+
+                <a href="{{ route('empresas.index') }}">
+                    <i class="fa fa-book" aria-hidden="true"
+                    ></i>
+                    <span class="title">@lang('quickadmin.empresa.title')</span>
+                </a>
+            </li>
+
+
             <li class="{{ $request->segment(1) == 'etapas' ? 'active' : '' }}">
 
                 <a href="{{ route('etapas.index') }}">
