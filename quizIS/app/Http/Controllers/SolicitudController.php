@@ -8,6 +8,7 @@ use App\TestAnswer;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreResultsRequest;
 use App\Http\Requests\UpdateResultsRequest;
+
 class ResultsController extends Controller
 {
     public function __construct()
