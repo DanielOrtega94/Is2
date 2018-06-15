@@ -24,8 +24,8 @@ class UpdateEtapasRequest extends FormRequest
     {
         return [
               'Nombre' => 'required',
-           # 'idetapa'=> 'required',
-            
+          { # 'idetapa'=> 'required',
+                      }
         ];
     }
 }

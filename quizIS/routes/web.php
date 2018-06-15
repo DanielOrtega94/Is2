@@ -50,4 +50,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('etapas','EtapaController');
     Route::post('etapas_mass_destroy', ['uses' => 'EtapaController@massDestroy', 'as' => 'etapas.mass_destroy']);
 
+    Route::resource('solicitudes','SolicitudController');
+
 });

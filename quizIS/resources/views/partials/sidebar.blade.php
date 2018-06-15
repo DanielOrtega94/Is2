@@ -39,6 +39,14 @@
                 </a>
             </li>
 
+             <li class="{{ $request->segment(1) == 'solicitudes' ? 'active' : '' }}">
+
+                <a href="{{ route('solicitudes.index') }}">
+                    <i class="fa fa-book" aria-hidden="true"
+                    ></i>
+                    <span class="title">@lang('quickadmin.solicitud.title')</span>
+                </a>
+            </li>
 
             <li class="{{ $request->segment(1) == 'etapas' ? 'active' : '' }}">
 
