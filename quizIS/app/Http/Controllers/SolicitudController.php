@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\solicitud;
+use App\Etapa;
+use App\Solicitud;
 
 use Illuminate\Http\Request;
 
@@ -22,9 +23,9 @@ class SolicitudController extends Controller
      */
     public function index()
     {
-        $etapas = Etapa::all();
+        $solicitudes = solicitud::all();
 
-        return view('solicitudes.index', compact('etapas'));
+        return view('solicitudes.index', compact('solicitudes'));
     }
      /**
      * Show the form for creating new etapa.

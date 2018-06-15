@@ -58,7 +58,7 @@
                         @endforeach
                     @else
                         <tr>
-                            <td colspan="3">@lang('quickadmin.no_entries_in_table')</td>
+                            <td colspan="9">@lang('quickadmin.no_entries_in_table')</td>
                         </tr>
                     @endif
                 </tbody>
