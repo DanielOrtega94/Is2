@@ -13,7 +13,7 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-xs-12 form-group">
-                    {!! Form::label('Nombre', 'Etapa*', ['class' => 'control-label']) !!}
+                    <kbd>{!! Form::label('Nombre', 'Etapa*', ['class' => 'control-label']) !!}</kbd>
                     {!! Form::select('Nombre', $etapas, old('Nombre'), ['class' => 'form-control']) !!}
                     <p class="help-block"></p>
                     @if($errors->has('topic_id'))
@@ -26,7 +26,7 @@
 
             <div class="row">
                 <div class="col-xs-12 form-group">
-                    {!! Form::label('topic_id', 'Topic*', ['class' => 'control-label']) !!}
+                    <kbd>{!! Form::label('topic_id', 'Topico*', ['class' => 'control-label']) !!}</kbd>
                     {!! Form::select('topic_id', $topics, old('topic_id'), ['class' => 'form-control']) !!}
                     <p class="help-block"></p>
                     @if($errors->has('topic_id'))
@@ -38,8 +38,8 @@
             </div>           
             <div class="row">
                 <div class="col-xs-12 form-group">
-                    {!! Form::label('question_text', 'Question text*', ['class' => 'control-label']) !!}
-                    {!! Form::textarea('question_text', old('question_text'), ['class' => 'form-control ', 'placeholder' => '']) !!}
+                    <kbd>{!! Form::label('question_text', 'Pregunta*', ['class' => 'control-label']) !!}</kbd>
+                    {!! Form::text('question_text', old('question_text'), ['class' => 'form-control ', 'placeholder' => '']) !!}
                     <p class="help-block"></p>
                     @if($errors->has('question_text'))
                         <p class="help-block">
@@ -48,13 +48,18 @@
                     @endif
                 </div>
             </div>
-            <div class="table-responsive">  
+            
+            <div id="id2" class="table-responsive">  
 
-                <table class="table table-bordered" id="dynamic_field">  
+                <table class="table table-bordered" id="dynamic_field">
+                <label class="control-label"><kbd>Opciones*</label>  
 
                     <tr>  
 
-                        <td><input type="text" name="name[]" placeholder="Ingrese opción" class="form-control name_list" /></td>  
+                        <div class="row">
+                            <td><input type="text" name="name[]" placeholder="Ingrese opción" class="form-control name_list" /></td>
+                            <td><input type="number" name="val[]" placeholder="Puntaje" class="form-control  "></td>  
+                        </div>
 
                         <td><button type="button" name="add" id="add" class="btn btn-success">Añadir más</button></td>  
 
@@ -82,7 +87,7 @@
         -->
             <div class="row">
                 <div class="col-xs-12 form-group">
-                    {!! Form::label('answer_explanation', 'Answer explanation*', ['class' => 'control-label']) !!}
+                    <kbd>{!! Form::label('answer_explanation', 'Explicación Respuesta*', ['class' => 'control-label']) !!}</kbd>
                     {!! Form::textarea('answer_explanation', old('answer_explanation'), ['class' => 'form-control ', 'placeholder' => '']) !!}
                     <p class="help-block"></p>
                     @if($errors->has('answer_explanation'))
@@ -92,7 +97,7 @@
                     @endif
                 </div>
             </div>
-            <div class="row">
+            <!--<div class="row">
                 <div class="col-xs-12 form-group">
                     {!! Form::label('more_info_link', 'More info link', ['class' => 'control-label']) !!}
                     {!! Form::text('more_info_link', old('more_info_link'), ['class' => 'form-control', 'placeholder' => '']) !!}
@@ -104,10 +109,11 @@
                     @endif
                 </div>
             </div>
+            -->
               <div class="row">
                 <div class="col-xs-12 form-group">
-                    {!! Form::label('ponderation', 'ponderation', ['class' => 'control-label']) !!}
-                    {!! Form::text('ponderation', old('ponderation'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                    <kbd>{!! Form::label('ponderation', 'Ponderacion*', ['class' => 'control-label']) !!}</kbd>
+                    {!! Form::number('ponderation', old('ponderation'), ['class' => 'form-control', 'placeholder' => '']) !!}
                     <p class="help-block"></p>
                     @if($errors->has('ponderation'))
                         <p class="help-block">
@@ -138,7 +144,7 @@
 
            i++;  
 
-           $('#dynamic_field').append('<tr id="row'+i+'" class="dynamic-added"><td><input type="text" name="name[]" placeholder="Ingrese opción" class="form-control name_list" /></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
+           $('#dynamic_field').append('<tr id="row'+i+'" class="dynamic-added"><td><input type="text" name="name[]" placeholder="Ingrese opción" class="form-control name_list" /></td><td><input type="number" name="val[]" placeholder="Puntaje" class="form-control  "></td>  <td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
 
       });  
 

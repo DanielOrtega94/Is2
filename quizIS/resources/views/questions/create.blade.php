@@ -24,7 +24,7 @@
                 </div>
             </div>
          
-    {!! Form::submit(trans('quickadmin.save'), ['class' => 'btn btn-danger']) !!}
+    {!! Form::submit('Buscar', ['class' => 'btn btn-success']) !!}
     {!! Form::close() !!}
 
 @endsection
