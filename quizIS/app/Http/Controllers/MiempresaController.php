@@ -46,9 +46,13 @@ class MiempresaController extends Controller
      */
     public function store(Request $request)
     {
-        $user_id = Auth::user()->getId();
+        $data = request()->all();
+     
+       
+        $data['user_id']=Auth::user()->getId();
+
         
-      Empresa::create($request->all(),$user_id);
+      Empresa::create($data);
 
         return redirect()->route('miempresa.index');
     }
