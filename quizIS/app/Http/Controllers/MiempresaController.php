@@ -17,9 +17,9 @@ class MiempresaController extends Controller
     {
         #$id = Auth::user()->getId();
         #$empresas = Empresa::findOrFail($id);
-        $empresas = Empresa::all();
 
-        return view('miempresa.index', compact('empresas'));
+
+        return view('miempresa.index');
     }
 
     /**

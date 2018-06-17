@@ -12,7 +12,7 @@ class PreguntaSeeder extends Seeder
      */
     public function run()
     {
-       DB::table('question')->insert([
+       DB::table('questions')->insert([
                 
                 'topic_id' => 1,
                 'etapa_id' => 1,
@@ -22,9 +22,9 @@ class PreguntaSeeder extends Seeder
                'updated_at'=> new DateTime,
            ]);	
 
-       DB::table('question')->insert([
+       DB::table('questions')->insert([
 
-                'topic_id' => 1,
+                'topic_id' => 2,
                 'etapa_id' => 1,
                 'question_text' =>'Describa sus segmento de clientes',
                  'answer_explanation' =>'ideas sobre modelo negocio',
@@ -32,9 +32,9 @@ class PreguntaSeeder extends Seeder
                'updated_at'=> new DateTime,
            ]);	
 
-       DB::table('question')->insert([
+       DB::table('questions')->insert([
                 
-                'topic_id' => 1,
+                'topic_id' => 3,
                 'etapa_id' => 1,
                 'question_text' =>'¿Tiene Modelo de negocio?',
                  'answer_explanation' =>'ideas sobre modelo negocio',

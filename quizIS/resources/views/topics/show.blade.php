@@ -16,6 +16,8 @@
                     <td>{{ $topic->title }}</td></tr>
                     <tr><th>@lang('quickadmin.topics.fields.etapa')</th>
                     <td>{{ $topic->idetapa }}</td></tr>
+                     <tr><th>Descripcion</th>
+                    <td>{{ $topic->descripcion }}</td></tr>
                     </table>
                 </div>
             </div>

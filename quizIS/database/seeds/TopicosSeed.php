@@ -16,6 +16,7 @@ class TopicosSeed extends Seeder
                 'id'    => 1,
                 'idetapa' => 'Idea',
                 'title' => 'Modelo de Negocio',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -23,6 +24,7 @@ class TopicosSeed extends Seeder
                 'id'    => 2,
                 'idetapa' => 'Idea',
                 'title' => 'Gestión Organizacional',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -30,6 +32,7 @@ class TopicosSeed extends Seeder
                 'id'    => 3,
                 'idetapa' => 'Idea',
                 'title' => 'Gestión Comercial',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -37,6 +40,7 @@ class TopicosSeed extends Seeder
                 'id'    => 4,
                 'idetapa' => 'Idea',
                 'title' => 'Gestión Financiera',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -44,6 +48,7 @@ class TopicosSeed extends Seeder
                 'id'    => 5,
                 'idetapa' => 'Idea',
                 'title' => 'Gestión Innovacion',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -51,6 +56,7 @@ class TopicosSeed extends Seeder
                 'id'    => 6,
                'idetapa' => 'Semilla',
                 'title' => 'Modelo de Negocio',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -58,6 +64,7 @@ class TopicosSeed extends Seeder
                 'id'    => 7,
                'idetapa' => 'Semilla',
                 'title' => 'Gestión Organizacional',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -65,6 +72,7 @@ class TopicosSeed extends Seeder
                 'id'    => 8,
                'idetapa' => 'Semilla',
                 'title' => 'Gestión Comercial',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -72,6 +80,7 @@ class TopicosSeed extends Seeder
                 'id'    => 9,
                'idetapa' => 'Semilla',
                 'title' => 'Gestión Financiera',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -79,6 +88,7 @@ class TopicosSeed extends Seeder
                 'id'    => 10,
                'idetapa' => 'Semilla',
                 'title' => 'Gestión Innovacion',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -86,6 +96,7 @@ class TopicosSeed extends Seeder
                 'id'    => 11,
                'idetapa' =>'Etapa Temprana',
                 'title' => 'Modelo de Negocio',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -93,6 +104,7 @@ class TopicosSeed extends Seeder
                 'id'    => 12,
                'idetapa' =>'Etapa Temprana',
                 'title' => 'Gestión Organizacional',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -100,6 +112,7 @@ class TopicosSeed extends Seeder
                 'id'    => 13,
                'idetapa' =>'Etapa Temprana',
                 'title' => 'Gestión Comercial',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -107,6 +120,7 @@ class TopicosSeed extends Seeder
                 'id'    => 14,
                'idetapa' =>'Etapa Temprana',
                 'title' => 'Gestión Financiera',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -114,6 +128,7 @@ class TopicosSeed extends Seeder
                 'id'    => 15,
                'idetapa' =>'Etapa Temprana',
                 'title' => 'Gestión Innovacion',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -121,6 +136,7 @@ class TopicosSeed extends Seeder
                 'id'    => 16,
                 'idetapa' =>'Expansión',
                 'title' => 'Modelo de Negocio',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -128,6 +144,7 @@ class TopicosSeed extends Seeder
                 'id'    => 17,
                 'idetapa' =>'Expansión',
                 'title' => 'Gestión Organizacional',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -135,6 +152,7 @@ class TopicosSeed extends Seeder
                 'id'    => 18,
                 'idetapa' =>'Expansión',
                 'title' => 'Gestión Comercial',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -142,6 +160,7 @@ class TopicosSeed extends Seeder
                 'id'    => 19,
                 'idetapa' =>'Expansión',
                 'title' => 'Gestión Financiera',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -149,6 +168,7 @@ class TopicosSeed extends Seeder
                 'id'    => 20,
                 'idetapa' =>'Expansión',
                 'title' => 'Gestión Innovacion',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -156,6 +176,7 @@ class TopicosSeed extends Seeder
                 'id'    => 21,
                 'idetapa' =>'Internalización',
                 'title' => 'Modelo de Negocio',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -163,6 +184,7 @@ class TopicosSeed extends Seeder
                 'id'    => 22,
                 'idetapa' =>'Internalización',
                 'title' => 'Gestión Organizacional',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -170,6 +192,7 @@ class TopicosSeed extends Seeder
                 'id'    => 23,
                 'idetapa' =>'Internalización',
                 'title' => 'Gestión Comercial',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -177,6 +200,7 @@ class TopicosSeed extends Seeder
                 'id'    => 24,
                 'idetapa' =>'Internalización',
                 'title' => 'Gestión Financiera',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -184,6 +208,7 @@ class TopicosSeed extends Seeder
                 'id'    => 25,
                 'idetapa' =>'Internalización',
                 'title' => 'Gestión Innovacion',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -191,6 +216,7 @@ class TopicosSeed extends Seeder
                 'id'    => 26,
                 'idetapa' =>'Retorno/Declive',
                 'title' => 'Modelo de Negocio',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -198,6 +224,7 @@ class TopicosSeed extends Seeder
                 'id'    => 27,
                 'idetapa' =>'Retorno/Declive',
                 'title' => 'Gestión Organizacional',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -205,6 +232,7 @@ class TopicosSeed extends Seeder
                 'id'    => 28,
                 'idetapa' =>'Retorno/Declive',
                 'title' => 'Gestión Comercial',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -212,6 +240,7 @@ class TopicosSeed extends Seeder
                 'id'    => 29,
                 'idetapa' =>'Retorno/Declive',
                 'title' => 'Gestión Financiera',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
            'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);	
@@ -219,6 +248,7 @@ class TopicosSeed extends Seeder
                 'id'    => 30,
                 'idetapa' =>'Retorno/Declive',
                 'title' => 'Gestión Innovacion',
+                'descripcion'=> 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no seaest Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua, ugo consetetur Lorem Ipsum.',
             ]);
 	  
     }

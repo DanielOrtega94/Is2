@@ -9,7 +9,7 @@ class Etapa extends Model
 {
      use SoftDeletes;
 
-    protected $fillable = ['id','Nombre'];
+    protected $fillable = ['id','Nombre','descripcion','requisitos'];
 
       public static function boot()
     {

@@ -10,7 +10,7 @@ class Topic extends Model
 	  use SoftDeletes;
 
   
-	protected $fillable = ['title','idetapa'];
+	protected $fillable = ['title','idetapa','descripcion'];
 
 	 public static function boot()
     {

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Etapa;
-#use App\Topic;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreEtapasRequest;
 use App\Http\Requests\UpdateEtapasRequest;
@@ -33,17 +32,7 @@ class EtapaController extends Controller
      */
     public function create()
     {
-       # $relations = [
-        #    'etapas' => \App\etapa::get()->pluck('title', 'id')->prepend('Please select', ''),
-        #];
-
-        #$etapa =['Idea' =>'Idea', 
-         #                'Semilla' => 'Semilla',
-          #               'Etapa Temprana' =>'Etapa Temprana',
-           #              'Expansión' =>'Expansión', 
-            #             'Internalización' =>'Internalización',
-             #            'Retorno/Declive' =>'Retorno/Declive'];
-
+       
       return view('etapas.create');
     }
     /**

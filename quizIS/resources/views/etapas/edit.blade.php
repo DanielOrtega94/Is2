@@ -16,6 +16,10 @@
                
                     {!! Form::label('nombre', 'Nombre*', ['class' => 'control-label']) !!}
                     {!! Form::text('Nombre', old('Nombre'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                     {!! Form::label('descripcion', 'descripcion', ['class' => 'control-label']) !!}
+                    {!! Form::text('descripcion', old('descripcion'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                    {!! Form::label('requisitos', 'requisitos', ['class' => 'control-label']) !!}
+                    {!! Form::text('requisitos', old('requisitos'), ['class' => 'form-control', 'placeholder' => '']) !!}
                     <p class="help-block"></p>
                     @if($errors->has('nombre'))
                         <p class="help-block">

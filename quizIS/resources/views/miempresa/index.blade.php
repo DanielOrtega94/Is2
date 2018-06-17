@@ -4,29 +4,36 @@
     <h3 class="page-title">@lang('quickadmin.empresa.title')</h3>
 
 
+    {!! Form::model($etapas, ['method' => 'PUT', 'route' => ['miempresa.store', ]]) !!}
+
     <div class="panel panel-default">
         <div class="panel-heading">
-            @lang('quickadmin.list')
+            @lang('quickadmin.edit')
         </div>
 
         <div class="panel-body">
-           
-                
-
-        <a href="{{ route('miempresa.create') }}" class="btn btn-success">@lang('quickadmin.add_new')</a>          
-         <a href="{{ route('miempresa.show',[$empresas->id]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.view')</a>
-        <a href="{{ route('miempresa.edit',[$empresas->id]) }}" class="btn btn-xs btn-info">@lang('quickadmin.edit')</a>
-                                   
-                               
-                  
+            <div class="row">
+                <div class="col-xs-12 form-group">
+               
+                    {!! Form::label('nombre', 'Nombre*', ['class' => 'control-label']) !!}
+                    {!! Form::text('Nombre', old('Nombre'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                     {!! Form::label('descripcion', 'descripcion', ['class' => 'control-label']) !!}
+                    {!! Form::text('descripcion', old('descripcion'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                    {!! Form::label('requisitos', 'requisitos', ['class' => 'control-label']) !!}
+                    {!! Form::text('requisitos', old('requisitos'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('nombre'))
+                        <p class="help-block">
+                            {{ $errors->first('nombre') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+            
         </div>
     </div>
+
+    {!! Form::submit(trans('quickadmin.update'), ['class' => 'btn btn-danger']) !!}
+    {!! Form::close() !!}
 @stop
 
-@section('javascript')
-
-    <script>
-     window.route_mass_crud_entries_destroy = '{{ route('miempresa.mass_destroy') }}';
-    </script>
-   
-@endsection

@@ -7,7 +7,9 @@ use Auth;
 use App\Test;
 use App\TestAnswer;
 use App\Topic;
+use App\Etapa;
 use App\Question;
+use App\Empresa;
 use App\QuestionsOption;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreTestRequest;
@@ -21,11 +23,43 @@ class TestsController extends Controller
      */
     public function index()
     {
-        // $topics = Topic::inRandomOrder()->limit(10)->get();
+      $etapas = Etapa::all();
+        $id = Auth::user()->getId();
+       $empresa = Empresa::findOrFail($id);
 
-        $questions = Question::get();
+
+       $questions = Question::all();
         foreach ($questions as &$question) {
             $question->options = QuestionsOption::where('question_id', $question->id)->inRandomOrder()->get();
+        }
+
+    return view('tests.index', compact('etapas','empresa'));
+       
+    }
+
+
+ public function create()
+    {
+    
+    }
+
+    public function select($id)
+    {
+
+
+      
+      $questions = Question::findOrFail($id);
+        foreach ($questions as &$question) {
+            $question->options = QuestionsOption::where('question_id', $question->id)->get();
+        }
+
+        /*
+        // $topics = Topic::inRandomOrder()->limit(10)->get();
+
+
+        $questions = Question::all();
+        foreach ($questions as &$question) {
+            $question->options = QuestionsOption::where('question_id', $question->id)->get();
         }
 
         /*
@@ -36,10 +70,22 @@ class TestsController extends Controller
                 shuffle($questions[$topic->id]['questions']['options']);
             }
         }
-        */
+            return view('tests.index', compact('questions'));
+         */
+   return view('tests.index',compact('questions'));
 
-        return view('tests.create', compact('questions'));
     }
+
+    public function edit($id){
+
+       $dimensiones = DB::table('topics')->where('idetapa', '=', $id)->get();
+        $user = Auth::user()->getId();
+       $empresa = Empresa::findOrFail($user);
+
+    return view('tests.edit', compact('dimensiones','empresa'));
+
+
+        }   
 
     /**
      * Store a newly solved Test in storage with results.
@@ -47,6 +93,7 @@ class TestsController extends Controller
      * @param  \App\Http\Requests\StoreResultsRequest  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store(Request $request)
     {
         $result = 0;

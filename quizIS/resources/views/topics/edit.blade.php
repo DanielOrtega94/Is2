@@ -17,6 +17,8 @@
                    {!! Form::select('idetapa', $etapas, old('idetapa'), ['class' => 'form-control']) !!}
                     {!! Form::label('title', 'Nombre*', ['class' => 'control-label']) !!}
                     {!! Form::text('title', old('title'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                     {!! Form::label('descripcion', 'descripcion', ['class' => 'control-label']) !!}
+                    {!! Form::text('descripcion', old('descripcion'), ['class' => 'form-control', 'placeholder' => '']) !!}
                     <p class="help-block"></p>
                     @if($errors->has('title'))
                         <p class="help-block">

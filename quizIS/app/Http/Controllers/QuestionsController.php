@@ -56,8 +56,9 @@ class QuestionsController extends Controller
             ];
 
             return view('questions.create2',$relations);
+        }   
 
-        }    /**
+         /**
      * Store a newly created Question in storage.
      *
      * @param  \App\Http\Requests\StoreQuestionsRequest  $request

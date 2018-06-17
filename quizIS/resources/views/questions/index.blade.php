@@ -17,8 +17,8 @@
                 <thead>
                     <tr>
                         <th style="text-align:center;"><input type="checkbox" id="select-all" /></th>
-                        <th>@lang('quickadmin.questions.fields.topic')</th>
                         <th>@lang('quickadmin.questions.fields.etapa')</th>
+                        <th>@lang('quickadmin.questions.fields.topic')</th>
                         <th>@lang('quickadmin.questions.fields.question-text')</th>
                         <th>&nbsp;</th>
                     </tr>
@@ -29,8 +29,8 @@
                         @foreach ($questions as $question)
                             <tr data-entry-id="{{ $question->id }}">
                                 <td></td>
-                                <td>{{ $question->topic->title or '' }}</td>
                                 <td>{!! $question->topic->idetapa !!}</td>
+                                <td>{{ $question->topic->title or '' }}</td>
                                 <td>{!! $question->question_text !!}</td>
                                 <td>
                                     <a href="{{ route('questions.show',[$question->id]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.view')</a>
