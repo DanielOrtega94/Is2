@@ -24,7 +24,7 @@ class TestsController extends Controller
     public function index()
     {
       $etapas = Etapa::all();
-        $id = Auth::user()->getId();
+      $id = Auth::user()->getId();
        $empresa = Empresa::findOrFail($id);
 
 

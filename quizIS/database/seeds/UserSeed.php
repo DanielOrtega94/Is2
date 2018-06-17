@@ -26,7 +26,7 @@ class UserSeed extends Seeder
                 'name'           => 'prueba',
                 'email'          => 'prueba@prueba.com',
                 'password'       => '$2y$10$GdubO8p..1F4Ic60m0e6Nu3H.0T5k6fhRmd3ozDuqaN.dBD83J9ue',
-                'role_id'        => 1,
+                'role_id'        => 2,
                 'remember_token' => '',
             ],
         ]);

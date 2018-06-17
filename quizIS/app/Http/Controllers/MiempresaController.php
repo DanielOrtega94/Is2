@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Empresa;
 use Auth;
+use DB;
+use App\Http\Requests\StoreEmpresaRequest;
+use App\Http\Requests\UpdateEmpresaRequest;
 
 class MiempresaController extends Controller
 {
@@ -15,11 +18,12 @@ class MiempresaController extends Controller
      */
     public function index()
     {
-        #$id = Auth::user()->getId();
-        #$empresas = Empresa::findOrFail($id);
+        $id = Auth::user()->getId();
+       
+         $empresas = DB::table('empresas')->where('user_id', '=', $id)->get();
 
 
-        return view('miempresa.index');
+        return view('miempresa.index',compact('empresas'));
     }
 
     /**
@@ -29,7 +33,9 @@ class MiempresaController extends Controller
      */
     public function create()
     {
-        //
+        // 
+        $id = Auth::user()->getId();
+        return view('miempresa.create',compact('id'));
     }
 
     /**
@@ -40,7 +46,11 @@ class MiempresaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user_id = Auth::user()->getId();
+        
+      Empresa::create($request->all(),$user_id);
+
+        return redirect()->route('miempresa.index');
     }
 
     /**
@@ -51,7 +61,10 @@ class MiempresaController extends Controller
      */
     public function show($id)
     {
-        //
+
+         //$empresa = DB::table('empresas')->where('Nombre', '=', $id)->get();
+         $empresa = Empresa::findOrFail($id);
+        return view('miempresa.show', compact('empresa'));
     }
 
     /**
@@ -62,7 +75,12 @@ class MiempresaController extends Controller
      */
     public function edit($id)
     {
-        //
+         
+        $empresas = Empresa::findOrFail($id);
+         
+        #$etapas = etapa::findOrFail($Nombre);
+
+        return view('miempresa.edit', compact('empresas'));
     }
 
     /**
@@ -74,7 +92,10 @@ class MiempresaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $etapas = empresa::findOrFail($id);
+        $etapas->update($request->all());
+
+        return redirect()->route('miempresa.index');
     }
 
     /**
@@ -85,6 +106,9 @@ class MiempresaController extends Controller
      */
     public function destroy($id)
     {
-        //
+         $etapas = Empresa::findOrFail($Nombre);
+        $etapas -> delete();
+
+        return redirect()->route('miempresa.index');
     }
 }

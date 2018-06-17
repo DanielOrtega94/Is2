@@ -3,7 +3,7 @@
 @section('content')
     <h3 class="page-title">@lang('quickadmin.etapa.title')</h3>
     
-    {!! Form::model($etapas, ['method' => 'PUT', 'route' => ['etapas.update', $etapas->id]]) !!}
+    {!! Form::model($empresas, ['method' => 'PUT', 'route' => ['miempresa.update', $empresas->id]]) !!}
 
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -14,8 +14,23 @@
             <div class="row">
                 <div class="col-xs-12 form-group">
                
-                    {!! Form::label('nombre', 'Nombre*', ['class' => 'control-label']) !!}
-                    {!! Form::text('Nombre', old('Nombre'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                    {!! Form::label('Nombre Empresa', 'Nombre', ['class' => 'control-label']) !!}
+                    {!! Form::text('Nombre', $empresas->Nombre, ['class' => 'form-control', 'placeholder' => '']) !!}
+                    
+
+                    {!! Form::label('Correo', 'Correo', ['class' => 'control-label']) !!}
+                    {!! Form::text('Correo', $empresas->correo, ['class' => 'form-control', 'placeholder' => '']) !!}
+
+                    {!! Form::label('Direccion', 'Direccion', ['class' => 'control-label']) !!}
+                    {!! Form::text('Direccion', $empresas->direccion, ['class' => 'form-control', 'placeholder' => '']) !!}
+
+                    {!! Form::label('Telefono', 'Telefono', ['class' => 'control-label']) !!}
+                    {!! Form::text('Telefono', $empresas->direccion, ['class' => 'form-control', 'placeholder' => '']) !!}
+
+                    {!! Form::label('rut_persona', 'Rut Persona Juridica', ['class' => 'control-label']) !!}
+                    {!! Form::text('rut_juridica', $empresas->rut_juridica, ['class' => 'form-control', 'placeholder' => '']) !!}
+
+
                     <p class="help-block"></p>
                     @if($errors->has('nombre'))
                         <p class="help-block">
