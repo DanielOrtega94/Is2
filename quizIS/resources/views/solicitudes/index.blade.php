@@ -3,10 +3,6 @@
 @section('content')
     <h3 class="page-title">@lang('quickadmin.solicitud.title')</h3>
 
-    <p>
-        <a href="{{ route('solicitudes.create') }}" class="btn btn-success">@lang('quickadmin.add_new')</a>
-    </p>
-
 
 
     <div class="panel panel-default">
