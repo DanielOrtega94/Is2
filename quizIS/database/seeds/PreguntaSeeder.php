@@ -103,8 +103,98 @@ class PreguntaSeeder extends Seeder
                 
                 'topic_id' => 1,
                 'etapa_id' => 1,
-                'question_text' =>'',
-                 'answer_explanation' =>'',
+                'question_text' =>'¿Cuenta con al menos una entidad con la que complementan propuestas de valor para atender alguna necesidad?',
+                 'answer_explanation' =>'Listado de alianzas estratégicas',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 1,
+                'etapa_id' => 1,
+                'question_text' =>'¿Tiene un objetivo para cada alianza estrategica?',
+                 'answer_explanation' =>'Objetivo de cada alianza estratégica',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 1,
+                'etapa_id' => 1,
+                'question_text' =>'¿Existe para cada propuesta de valor al menos un segmento de clientes asociado a dicha propuesta?',
+                 'answer_explanation' =>'Canales para cada relación: Propuesta de Valor - Segmento de Cliente',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 1,
+                'etapa_id' => 1,
+                'question_text' =>'¿Posee una planificacion de actividades para cada canal?',
+                 'answer_explanation' =>'Principales actividades de gestión de cada canal identificado',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 1,
+                'etapa_id' => 1,
+                'question_text' =>'¿Se ha identificado y determinado una relacion particular para llegar al segmento de clientes a traves de una propuesta de valor especifica?',
+                 'answer_explanation' =>'Identifique cada relación con los segmentos de clientes señalados anteriormente',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 1,
+                'etapa_id' => 1,
+                'question_text' =>'¿Para cada relacion identificada se establece al menos un objetivo para el desarrollo de la relacion cliente - empresa?',
+                 'answer_explanation' =>'Tipo u objetivo de cada relación identificad',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 1,
+                'etapa_id' => 1,
+                'question_text' =>'¿Para cada relacion se establecen actividades para el desarrollo de las relaciones identificada?',
+                 'answer_explanation' =>'Principales actividades ascociadas al desarrollo o gestión de cada relación identificada',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 1,
+                'etapa_id' => 1,
+                'question_text' =>'¿Ha identificado los tipos de ingresos que va a percibir por la comercializacion de sus productos o servicios ?',
+                 'answer_explanation' =>'Identifique y cuantifique en $ cada tipo de ingreso de la Compañía',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 1,
+                'etapa_id' => 1,
+                'question_text' =>'¿Ha identificado  recursos fisicos, economicos, humanos e intelectuales ?',
+                 'answer_explanation' =>'¿Cuáles son los recursos clave de la Compñaía?',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 1,
+                'etapa_id' => 1,
+                'question_text' =>'¿Ha identificado y valorizado los costos pertinentes a la producccion o prestacion de servicios de la compañía?',
+                 'answer_explanation' =>'Liste la estructura de costos de la Compañía',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 3,
+                'option' => 'wena',
+                 'ponderation' => 4,
+                 'correct' => 0,
                 'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);
