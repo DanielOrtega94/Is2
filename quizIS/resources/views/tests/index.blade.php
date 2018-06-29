@@ -19,19 +19,18 @@
                 
                 <tbody>
                     @if (count($etapas) > 0)
-
                         @foreach ($etapas as $solicitud)
-
+                        {!! Form::open(['method' => 'POST', 'route' =>  ['tests.select']]) !!}
                             <tr data-entry-id="{{ $solicitud->id }}">
-                                
-                                <td>{{ $solicitud->Nombre }}</td>
-                                <td>{{ $solicitud->descripcion }}</td>
-                                 <td>{{ $solicitud->requisitos }}</td> 
-                                <td>
-                                    <a href="{{ route('tests.edit',[$solicitud->Nombre]) }}" class="btn btn-xs btn-primary">Empezar quiz!</a>    
-                                </td>
+                                <td>{{ Form::label('Nombre',$solicitud->Nombre,['class' => 'control-label'])}}</td>
+                                <td>{{ Form::label('Nombre',$solicitud->descripcion,['class' => 'control-label'])}}</td>
+                                <td>{{ Form::label('Nombre',$solicitud->requisitos,['class' => 'control-label'])}}</td>
+                                {{ Form::hidden('id',$solicitud->id) }}
+                                <td>{{ Form::submit('Ingresar', ['class' => 'btn btn-success']) }}</td>
                             </tr>
+                             {!! Form::close() !!}
                         @endforeach
+                       
                     @else
                         <tr>
                             <td colspan="4">@lang('quickadmin.no_entries_in_table')</td>

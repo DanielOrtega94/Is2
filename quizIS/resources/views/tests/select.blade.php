@@ -45,7 +45,11 @@
         </div>
     @endif
     </div>
-
+    @if(count($questions) < 0)
+        <div class="panel-body">
+            <h1>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA NO AGARRA NADA</h1>
+        </div>
+        @endif
     {!! Form::submit(trans('quickadmin.submit_quiz'), ['class' => 'btn btn-danger']) !!}
     {!! Form::close() !!}
 @stop

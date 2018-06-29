@@ -14,7 +14,7 @@
             <div class="row">
                 <div class="col-xs-12 form-group">
                     <kbd>{!! Form::label('Nombre', 'Etapa*', ['class' => 'control-label']) !!}</kbd>
-                    {!! Form::select('Nombre', $etapas, old('Nombre'), ['class' => 'form-control']) !!}
+                    {!! Form::select('Nombre', $etapas, old('Nombre'), ['class' => 'form-control'] ) !!}
                     <p class="help-block"></p>
                     @if($errors->has('topic_id'))
                         <p class="help-block">

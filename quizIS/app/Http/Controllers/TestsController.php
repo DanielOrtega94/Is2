@@ -12,6 +12,7 @@ use App\Question;
 use App\Empresa;
 use App\QuestionsOption;
 use Illuminate\Http\Request;
+use App\Http\Requests\SelectEtapaRequest;
 use App\Http\Requests\StoreTestRequest;
 
 class TestsController extends Controller
@@ -25,31 +26,24 @@ class TestsController extends Controller
     {
       $etapas = Etapa::all();
       $id = Auth::user()->getId();
-       $empresa = Empresa::findOrFail($id);
-
-
-       $questions = Question::all();
-        foreach ($questions as &$question) {
-            $question->options = QuestionsOption::where('question_id', $question->id)->inRandomOrder()->get();
-        }
+      $empresa = Empresa::findOrFail($id);
 
     return view('tests.index', compact('etapas','empresa'));
        
     }
 
 
- public function create()
+    public function create()
     {
     
     }
 
-    public function select($id)
+    /*public function select2()
     {
 
-
-      
-      $questions = Question::findOrFail($id);
-        foreach ($questions as &$question) {
+      $id = $request->id;
+      $questions = DB::table('questions')->where('topic_id', '=', $id)->get();
+      foreach ($questions as $question) {
             $question->options = QuestionsOption::where('question_id', $question->id)->get();
         }
 
@@ -62,7 +56,7 @@ class TestsController extends Controller
             $question->options = QuestionsOption::where('question_id', $question->id)->get();
         }
 
-        /*
+        
         foreach ($topics as $topic) {
             if ($topic->questions->count()) {
                 $questions[$topic->id]['topic'] = $topic->title;
@@ -71,21 +65,23 @@ class TestsController extends Controller
             }
         }
             return view('tests.index', compact('questions'));
-         */
-   return view('tests.index',compact('questions'));
+         
+   return view('tests.select2',compact('questions'));
 
-    }
+    }*/
 
-    public function edit($id){
+    public function select(SelectEtapaRequest $request){
 
-       $dimensiones = DB::table('topics')->where('idetapa', '=', $id)->get();
-        $user = Auth::user()->getId();
-       $empresa = Empresa::findOrFail($user);
+      $id = $request->id;
+      $user = Auth::user()->getId();
+      $empresa = Empresa::findOrFail($user);
+      $questions = DB::table('questions')->where('etapa_id','=',$id)->get();
+       foreach ($questions as &$question) {
+            $question->options = QuestionsOption::where('question_id', $question->id)->get();
+        }
 
-    return view('tests.edit', compact('dimensiones','empresa'));
-
-
-        }   
+    return view('tests.select', compact('dimensiones','empresa','questions'));
+    }   
 
     /**
      * Store a newly solved Test in storage with results.
@@ -124,5 +120,69 @@ class TestsController extends Controller
         $test->update(['result' => $result]);
 
         return redirect()->route('results.show', [$test->id]);
+    }
+
+    /**
+     * Update Question in storage.
+     *
+     * @param  \App\Http\Requests\UpdateQuestionsRequest  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(UpdateQuestionsRequest $request, $id)
+    {
+        $question = Question::findOrFail($id);
+        $question->update($request->all());
+
+        return redirect()->route('questions.index');
+    }
+
+
+    /**
+     * Display Question.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $relations = [
+            'topics' => \App\Topic::get()->pluck('title', 'id')->prepend('Please select', ''),
+        ];
+
+        $question = Question::findOrFail($id);
+
+        return view('questions.show', compact('question') + $relations);
+    }
+
+
+    /**
+     * Remove Question from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        $question = Question::findOrFail($id);
+        $question->delete();
+
+        return redirect()->route('questions.index');
+    }
+
+    /**
+     * Delete all selected Question at once.
+     *
+     * @param Request $request
+     */
+    public function massDestroy(Request $request)
+    {
+        if ($request->input('ids')) {
+            $entries = Question::whereIn('id', $request->input('ids'))->get();
+
+            foreach ($entries as $entry) {
+                $entry->delete();
+            }
+        }
     }
 }
