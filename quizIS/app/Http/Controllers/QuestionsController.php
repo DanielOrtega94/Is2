@@ -81,7 +81,8 @@ class QuestionsController extends Controller
             'topic_id' => $request->topic_id,
             'etapa_id' => $etapa[0]->id,
             'question_text' => $request->question_text,
-            'answer_explanation' => $request->answer_explanation
+            'answer_explanation' => $request->answer_explanation,
+            'ponderation' => $request->ponderation
         ]);
 
         if($validator->passes()){
@@ -99,10 +100,7 @@ class QuestionsController extends Controller
 
         }
 
-
         return response()->json(['error'=>$validator->errors()->all()]);
-        
-
         
     }
 

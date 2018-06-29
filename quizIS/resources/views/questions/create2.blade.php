@@ -122,7 +122,6 @@
                     @endif
                 </div>
             </div>
-
         </div>
     </div>
     {!! Form::submit(trans('quickadmin.save'), ['class' => 'btn btn-danger']) !!}
