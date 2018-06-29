@@ -53,6 +53,7 @@ class QuestionsController extends Controller
             $relations = [
                 'etapas' => Etapa::where("Nombre", $request->Nombre)->get()->pluck('Nombre','Nombre'),
                 'topics' => Topic::where('idetapa',$request->Nombre)->get()->pluck('title','id'),
+                'etapa' => DB::table('etapas')->where('Nombre','=',$request->Nombre)->select("Nombre")->get(),
             ];
 
             return view('questions.create2',$relations);
@@ -73,8 +74,15 @@ class QuestionsController extends Controller
         }
 
         $validator = Validator::make($request->all(),$rules);
-        
-        $question = Question::create($request->all());
+
+        $etapa = Etapa::where('Nombre',$request->Nombre)->select('id')->get();
+
+        $question = Question::create([
+            'topic_id' => $request->topic_id,
+            'etapa_id' => $etapa[0]->id,
+            'question_text' => $request->question_text,
+            'answer_explanation' => $request->answer_explanation
+        ]);
 
         if($validator->passes()){
 

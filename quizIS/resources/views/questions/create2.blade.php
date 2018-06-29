@@ -18,7 +18,7 @@
                     <p class="help-block"></p>
                     @if($errors->has('topic_id'))
                         <p class="help-block">
-                            {{ $errors->first('topic_id') }}
+                            {{ $errors->first('Nombre') }}
                         </p>
                     @endif
                 </div>
