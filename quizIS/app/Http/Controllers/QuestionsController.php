@@ -92,6 +92,9 @@ class QuestionsController extends Controller
                 QuestionsOption::create([
                     'question_id' => $question->id,
                     'option'      => $value
+                    //,
+                    //'puntaje'=>
+                    
                 ]);
             }
 
@@ -122,6 +125,7 @@ class QuestionsController extends Controller
         return view('questions.edit', compact('question') + $relations);
     }
 
+
     /**
      * Update Question in storage.
      *
@@ -151,8 +155,9 @@ class QuestionsController extends Controller
         ];
 
         $question = Question::findOrFail($id);
+        $questions_options=DB::table('questions_options')->where('question_id','=',$id)->get();
 
-        return view('questions.show', compact('question') + $relations);
+        return view('questions.show', compact('question','questions_options') + $relations);
     }
 
 

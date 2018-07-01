@@ -193,7 +193,7 @@ class PreguntaSeeder extends Seeder
                 
                 'question_id' => 3,
                 'option' => 'wena',
-                 'ponderation' => 4,
+                 'puntaje' => 4,
                  'correct' => 0,
                 'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
