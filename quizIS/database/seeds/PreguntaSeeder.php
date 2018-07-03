@@ -197,7 +197,7 @@ class PreguntaSeeder extends Seeder
                  'correct' => 0,
                 'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
-           ]);/*
+           ]);
               DB::table('questions_options')->insert([
                 
                 'question_id' => 3,
@@ -233,7 +233,7 @@ class PreguntaSeeder extends Seeder
                  'correct' => 0,
                 'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
-           ]);*/
+           ]);
 
     }
 }
