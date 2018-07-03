@@ -116,7 +116,7 @@ class QuestionsOptionsController extends Controller
         $questionsoption = QuestionsOption::findOrFail($id);
         $questionsoption->delete();
 
-        return redirect()->route('questions_options.index');
+        return redirect()->route('questions.index');
     }
 
     /**

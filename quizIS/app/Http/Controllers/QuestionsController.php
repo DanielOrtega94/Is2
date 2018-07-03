@@ -155,7 +155,7 @@ class QuestionsController extends Controller
         ];
 
         $question = Question::findOrFail($id);
-        $questions_options=DB::table('questions_options')->where('question_id','=',$id)->get();
+        $questions_options=DB::table('questions_options')->where('question_id','=',$id)->where('deleted_at','=',NULL)->get();
 
         return view('questions.show', compact('question','questions_options') + $relations);
     }

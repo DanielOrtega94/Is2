@@ -37,13 +37,12 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 form-group">
-                    {!! Form::label('correct', 'Correct', ['class' => 'control-label']) !!}
-                    {!! Form::hidden('correct', 0) !!}
-                    {!! Form::checkbox('correct', 1, old('correct', 0), ['class' => 'form-control']) !!}
+                    {!! Form::label('Puntaje', 'Puntaje', ['class' => 'control-label']) !!}
+                    {!! Form::number('puntaje', old('puntaje'), ['class' => 'form-control', 'puntaje' => '']) !!}
                     <p class="help-block"></p>
-                    @if($errors->has('correct'))
+                    @if($errors->has('puntaje'))
                         <p class="help-block">
-                            {{ $errors->first('correct') }}
+                            {{ $errors->first('puntaje') }}
                         </p>
                     @endif
                 </div>
