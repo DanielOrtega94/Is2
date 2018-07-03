@@ -192,12 +192,48 @@ class PreguntaSeeder extends Seeder
               DB::table('questions_options')->insert([
                 
                 'question_id' => 3,
-                'option' => 'wena',
+                'option' => 'Si',
                  'puntaje' => 4,
                  'correct' => 0,
                 'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
+           ]);/*
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 3,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
            ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 5,
+                'option' => 'NO ha identificado segmentos de clientes',
+                 'puntaje' => 1,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]); 
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 5,
+                'option' => 'Ha identificado segmentos de clientes pero no ha desechado o seleccionado en relacion a las propuestas de valor',
+                 'puntaje' => 3,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 5,
+                'option' => 'Ha identificado segmentos de clientes y ha desechado o seleccionado en relacion a las propuestas de valor',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);*/
 
     }
 }
