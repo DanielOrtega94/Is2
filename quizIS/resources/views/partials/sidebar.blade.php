@@ -71,12 +71,13 @@
                     <span class="title">@lang('quickadmin.questions.title')</span>
                 </a>
             </li>
-            <li class="{{ $request->segment(1) == 'questions_options' ? 'active' : '' }}">
+         <!--   <li class="{{ $request->segment(1) == 'questions_options' ? 'active' : '' }}">
                 <a href="{{ route('questions_options.index') }}">
                     <i class="fa fa-gears"></i>
                     <span class="title">@lang('quickadmin.questions-options.title')</span>
                 </a>
             </li>
+        -->
             <li>
                 <a href="#">
                     <i class="fa fa-users"></i>
