@@ -220,7 +220,7 @@ class PreguntaSeeder extends Seeder
                 
                 'question_id' => 6,
                 'option' => 'No',
-                 'puntaje' => 0,
+                 'puntaje' => 2,
                  'correct' => 0,
                 'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
@@ -301,7 +301,7 @@ class PreguntaSeeder extends Seeder
                 
                 'question_id' => 5,
                 'option' => 'No',
-                 'puntaje' => 0,
+                 'puntaje' => 2,
                  'correct' => 0,
                 'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
@@ -364,7 +364,7 @@ class PreguntaSeeder extends Seeder
                 
                 'question_id' => 10,
                 'option' => 'No',
-                 'puntaje' => 0,
+                 'puntaje' => 2,
                  'correct' => 0,
                 'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
@@ -382,7 +382,7 @@ class PreguntaSeeder extends Seeder
                 
                 'question_id' => 11,
                 'option' => 'No',
-                 'puntaje' => 0,
+                 'puntaje' => 2,
                  'correct' => 0,
                 'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
@@ -400,7 +400,7 @@ class PreguntaSeeder extends Seeder
                 
                 'question_id' => 12,
                 'option' => 'No',
-                 'puntaje' => 0,
+                 'puntaje' => 2,
                  'correct' => 0,
                 'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
@@ -418,7 +418,7 @@ class PreguntaSeeder extends Seeder
                 
                 'question_id' => 13,
                 'option' => 'No',
-                 'puntaje' => 0,
+                 'puntaje' => 2,
                  'correct' => 0,
                 'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
@@ -463,7 +463,7 @@ class PreguntaSeeder extends Seeder
                 
                 'question_id' => 15,
                 'option' => 'No',
-                 'puntaje' => 0,
+                 'puntaje' => 2,
                  'correct' => 0,
                 'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
@@ -481,7 +481,7 @@ class PreguntaSeeder extends Seeder
                 
                 'question_id' => 16,
                 'option' => 'No',
-                 'puntaje' => 0,
+                 'puntaje' => 2,
                  'correct' => 0,
                 'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
@@ -508,7 +508,7 @@ class PreguntaSeeder extends Seeder
                 
                 'question_id' => 17,
                 'option' => 'No',
-                 'puntaje' => 0,
+                 'puntaje' => 2,
                  'correct' => 0,
                 'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
@@ -525,7 +525,7 @@ class PreguntaSeeder extends Seeder
                 
                 'question_id' => 18,
                 'option' => 'No',
-                 'puntaje' => 0,
+                 'puntaje' => 2,
                  'correct' => 0,
                 'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
@@ -542,7 +542,7 @@ class PreguntaSeeder extends Seeder
                 
                 'question_id' => 19,
                 'option' => 'No',
-                 'puntaje' => 0,
+                 'puntaje' => 2,
                  'correct' => 0,
                 'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
@@ -605,7 +605,7 @@ class PreguntaSeeder extends Seeder
                 
                 'question_id' => 21,
                 'option' => 'No',
-                 'puntaje' => 0,
+                 'puntaje' => 2,
                  'correct' => 0,
                 'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
