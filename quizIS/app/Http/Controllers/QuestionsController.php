@@ -86,6 +86,11 @@ class QuestionsController extends Controller
             'inicial'=>$request->inicial
         ]);
 
+        foreach ($request->input('value') as $key => $value) {
+            
+            $point[$key] = $value;
+        }
+
         if($validator->passes()){
 
             foreach($request->input('name') as $key => $value) {
@@ -93,9 +98,7 @@ class QuestionsController extends Controller
                 QuestionsOption::create([
                     'question_id' => $question->id,
                     'option'      => $value,
-                
-                    //,
-                    //'puntaje'=>
+                    'puntaje'   => $point[$key]
                     
                 ]);
             }

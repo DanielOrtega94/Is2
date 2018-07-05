@@ -28,6 +28,7 @@ class StoreQuestionsRequest extends FormRequest
             'question_text'      => 'required',
             'answer_explanation' => 'required',
             'ponderation' => 'required',
+            'name' => 'required',
         ];
     }
 }

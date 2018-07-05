@@ -21,9 +21,7 @@
                     <td>{!! $question->question_text !!}</td></tr>
 
                 <tr><th>@lang('quickadmin.questions.fields.answer-explanation')</th>
-                    <td>{!! $question->answer_explanation !!}</td></tr><tr><th>Ponderacion</th>
-                    <td>{{ $question->ponderation }}</td></tr>
-
+                    <td>{!! $question->answer_explanation !!}</td></tr>
                     </table>
                 </div>
             </div>

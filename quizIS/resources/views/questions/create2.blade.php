@@ -54,7 +54,7 @@
                     <tr>  
                         <div class="row">
                             <td><input type="text" name="name[]" placeholder="Ingrese opción" class="form-control name_list" /></td>
-                            <td><input type="number" name="val[]" placeholder="Puntaje" class="form-control  "></td>  
+                            <td><input type="number" name="value[]" placeholder="Puntaje" class="form-control  "></td>  
                         </div>
                         <td><button type="button" name="add" id="add" class="btn btn-success">Añadir más</button></td>  
                     </tr>  
@@ -115,7 +115,7 @@
       $('#add').click(function(){  
            i++;  
            $('#dynamic_field').append(
-            '<tr id="row'+i+'" class="dynamic-added"><td><input type="text" name="name[]" placeholder="Ingrese opción" class="form-control name_list"/> </td><td><input type="number" name="val[]" placeholder="Puntaje" class="form-control"></td>  <td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
+            '<tr id="row'+i+'" class="dynamic-added"><td><input type="text" name="name[]" placeholder="Ingrese opción" class="form-control name_list"/> </td><td><input type="number" name="value[]" placeholder="Puntaje" class="form-control"></td>  <td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
       });  
       $(document).on('click', '.btn_remove', function(){  
            var button_id = $(this).attr("id");   

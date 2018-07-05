@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </div>
-            <a href="{{ route('tests.index') }}" class="btn btn-success"> @lang('quickadmin.home.exito') </a>
+            <a href="{{ route('tests.index') }}" class="btn btn-success">Realizar nuevo diagnóstico</a>
         </div>
     </div>
 @endsection
