@@ -35,13 +35,13 @@
             <li class="{{ $request->segment(1) == 'empresas' ? 'active' : '' }}">
 
                 <a href="{{ route('empresas.index') }}">
-                    <i class="fa fa-book" aria-hidden="true"
+                    <i class="fa fa-building" aria-hidden="true"
                     ></i>
                     <span class="title">@lang('quickadmin.empresa.title')</span>
                 </a>
             </li>
 
-             <li class="{{ $request->segment(1) == 'solicitudes' ? 'active' : '' }}">
+  <!--           <li class="{{ $request->segment(1) == 'solicitudes' ? 'active' : '' }}">
 
                 <a href="{{ route('solicitudes.index') }}">
                     <i class="fa fa-book" aria-hidden="true"
@@ -49,6 +49,7 @@
                     <span class="title">@lang('quickadmin.solicitud.title')</span>
                 </a>
             </li>
+-->
 
             <li class="{{ $request->segment(1) == 'etapas' ? 'active' : '' }}">
 
@@ -61,7 +62,7 @@
 
             <li class="{{ $request->segment(1) == 'topics' ? 'active' : '' }}">
                 <a href="{{ route('topics.index') }}">
-                    <i class="fa fa-building"></i>
+                    <i class="fa fa-glasses"></i>
                     <span class="title">@lang('quickadmin.topics.title')</span>
                 </a>
             </li>
