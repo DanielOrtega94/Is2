@@ -54,7 +54,7 @@
             <li class="{{ $request->segment(1) == 'etapas' ? 'active' : '' }}">
 
                 <a href="{{ route('etapas.index') }}">
-                    <i class="fa fa-book" aria-hidden="true"
+                    <i class="fa fa-th" aria-hidden="true"
                     ></i>
                     <span class="title">@lang('quickadmin.etapa.title')</span>
                 </a>
@@ -62,7 +62,7 @@
 
             <li class="{{ $request->segment(1) == 'topics' ? 'active' : '' }}">
                 <a href="{{ route('topics.index') }}">
-                    <i class="fa fa-glasses"></i>
+                    <i class="fa fa-files-o"></i>
                     <span class="title">@lang('quickadmin.topics.title')</span>
                 </a>
             </li>
