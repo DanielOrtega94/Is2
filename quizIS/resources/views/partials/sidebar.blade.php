@@ -62,7 +62,9 @@
 
             <li class="{{ $request->segment(1) == 'topics' ? 'active' : '' }}">
                 <a href="{{ route('topics.index') }}">
+
                     <i class="fa fa-files-o"></i>
+
                     <span class="title">@lang('quickadmin.topics.title')</span>
                 </a>
             </li>

@@ -27,8 +27,13 @@ class TestsController extends Controller
       $etapas = Etapa::all();
       $id = Auth::user()->getId();
       $empresa = Empresa::findOrFail($id);
+      $questions =  DB::table('questions')->where('inicial','=',1)->get();
+        foreach ($questions as &$question) {
+            $question->options = QuestionsOption::where('question_id', $question->id)->get();
+        }
 
-    return view('tests.index', compact('etapas','empresa'));
+
+    return view('tests.index', compact('etapas','questions'));
        
     }
 
