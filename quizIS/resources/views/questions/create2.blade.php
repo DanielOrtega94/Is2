@@ -86,6 +86,22 @@
                     @endif
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    <kbd>{!! Form::label('inicial', 'inicial', ['class' => 'control-label']) !!}</kbd>
+                    {!! Form::hidden('inicial', 0) !!}
+                    {!! Form::checkbox('inicial', 1, 0, ['class' => 'form-control']) !!}
+                    <p class="help-block"></p>
+                    @if($errors->has('inicial'))
+                        <p class="help-block">
+                            {{ $errors->first('inicial') }}
+                        </p>
+                    @endif
+                </div>
+            </div>
+            
+
         </div>
     </div>
     {!! Form::submit(trans('quickadmin.save'), ['class' => 'btn btn-danger']) !!}

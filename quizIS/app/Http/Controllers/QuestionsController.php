@@ -82,7 +82,8 @@ class QuestionsController extends Controller
             'etapa_id' => $etapa[0]->id,
             'question_text' => $request->question_text,
             'answer_explanation' => $request->answer_explanation,
-            'ponderation' => $request->ponderation
+            'ponderation' => $request->ponderation,
+            'inicial'=>$request->inicial
         ]);
 
         if($validator->passes()){
@@ -91,7 +92,8 @@ class QuestionsController extends Controller
 
                 QuestionsOption::create([
                     'question_id' => $question->id,
-                    'option'      => $value
+                    'option'      => $value,
+                
                     //,
                     //'puntaje'=>
                     

@@ -18,7 +18,7 @@ class Question extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['question_text', 'ponderation', 'answer_explanation', 'more_info_link', 'topic_id','etapa_id'];
+    protected $fillable = ['question_text', 'ponderation', 'answer_explanation', 'more_info_link', 'topic_id','etapa_id','inicial'];
 
     public static function boot()
     {
