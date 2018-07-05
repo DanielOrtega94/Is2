@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-10">
             <div class="panel panel-default">
-                <div class="panel-heading">@lang('quickadmin.home.bienvenida')</div>
+                <div class="panel-heading">Bienvenido! Aqui se muestra un resumen</div>
 
                 <div class="panel-body">
                     <div class="row">
@@ -25,9 +25,39 @@
                            @lang('quickadmin.home.promedio')
                         </div>
                     </div>
+                     </div>
+                     </div>
+                     <div class="panel panel-default">
+                      <div class="panel-heading">Empresas en etapa</div>
+                      <div class="panel-body">
+                    <div class="row">
+                     
+                         <div class="col-md-5 text-center">
+                            <h1>{{ $idea }}</h1>
+                            Idea
+                        </div>
+                        <div class="col-md-5 text-center">
+                            <h1>{{ $semilla }}</h1>
+                            Semilla
+                        </div>
+                        <div class="col-md-5 text-center">
+                            <h1>{{ $temprana }}</h1>
+                            Temprana
+                        </div>
+                        <div class="col-md-5 text-center">
+                            <h1>{{ $expansion }}</h1>
+                            Expansion
+                        </div>
+                        <div class="col-md-5 text-center">
+                            <h1>{{ $internacionalizacion }}</h1>
+                            Internacionalizacion
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
-            <a href="{{ route('tests.index') }}" class="btn btn-success">Realizar nuevo diagnóstico</a>
+            
         </div>
     </div>
 @endsection

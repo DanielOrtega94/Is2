@@ -17,7 +17,7 @@
             <div class="row">
                 <div class="col-xs-12 form-group">
                     <div class="form-group">
-                        <strong>Question {{ $i }}.<br />{!! nl2br($question->question_text) !!}</strong>
+                        <strong>Question {{ $i }}.<br />{!! nl2br($question->question_text) !!}</strong>    
 
                       
                         <input
