@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h3 class="page-title">@lang('quickadmin.etapa.title')</h3>
+    <h3 class="page-title">@lang('quickadmin.empresa.title')|</h3>
     
     {!! Form::model($empresas, ['method' => 'PUT', 'route' => ['miempresa.update', $empresas->id]]) !!}
 

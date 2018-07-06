@@ -82,7 +82,7 @@
                 <div class="col-md-3 text-center">
                     Porfavor registre una empresa, para mostrar un resumen
                     <p>
-                        <a href="{{ route('miempresa.create') }}" class="btn btn-success">@lang('quickadmin.add_new')</a>
+                    <a href="{{ route('miempresa.create') }}" class="btn btn-success">@lang('quickadmin.add_new')</a>
                     </p>
                 </div>
             </div>

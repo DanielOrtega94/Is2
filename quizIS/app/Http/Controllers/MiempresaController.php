@@ -67,7 +67,7 @@ class MiempresaController extends Controller
     {
 
         $empresa = Empresa::findOrFail($id);
-        return view('empresa.show', compact('empresa'));
+        return view('miempresa.show', compact('empresa'));
     }
 
     /**
@@ -83,7 +83,7 @@ class MiempresaController extends Controller
          
         #$etapas = etapa::findOrFail($Nombre);
 
-        return view('empresa.edit', compact('empresas'));
+        return view('miempresa.edit', compact('empresas'));
     }
 
     /**

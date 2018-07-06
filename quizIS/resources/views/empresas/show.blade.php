@@ -18,13 +18,13 @@
                         <th>@lang('quickadmin.empresa.fields.telefono')</th>
                         <th>@lang('quickadmin.empresa.fields.etapa')</th>
                         <th>@lang('quickadmin.empresa.fields.nota')</th>
-                        <th>@lang('quickadmin.empresa.fields.quiz')</th>
+                
                 </tr>
                     <td>{{ $empresa->Nombre }}</td>
                     <td>{{ $empresa->correo }}</td>
                     <td>{{ $empresa->direccion }}</td>
                     <td>{{ $empresa->telefono }}</td>
-                    <td>{{ $empresa->telefono }}</td>
+                    <td>{{ $empresa->etapa }}</td>
                     <td>{{ $empresa->telefono }}</td>
                     <td>{{ $empresa->telefono }}</td>
                     </table>
