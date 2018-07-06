@@ -20,7 +20,7 @@
                         <th>@lang('quickadmin.questions.fields.etapa')</th>
                         <th>@lang('quickadmin.questions.fields.topic')</th>
                         <th>@lang('quickadmin.questions.fields.question-text')</th>
-                        <th>Inicial</th>
+                   
                         <th>&nbsp;</th>
                     </tr>
                 </thead>
@@ -33,7 +33,7 @@
                                 <td>{!! $question->topic->idetapa !!}</td>
                                 <td>{{ $question->topic->title or '' }}</td>
                                 <td>{!! $question->question_text !!}</td>
-                                 <td>{!! $question->inicial !!}</td>
+                                
                                 <td>
                                     <a href="{{ route('questions.show',[$question->id]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.view')</a>
                                     <a href="{{ route('questions.edit',[$question->id]) }}" class="btn btn-xs btn-info">@lang('quickadmin.edit')</a>
