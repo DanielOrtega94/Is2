@@ -23,7 +23,7 @@
                         <th>@lang('quickadmin.empresa.fields.telefono')</th>
                         <th>@lang('quickadmin.empresa.fields.etapa')</th>
                         <th>@lang('quickadmin.empresa.fields.nota')</th>
-                        <th>@lang('quickadmin.empresa.fields.quiz')</th>
+                        
                    
                         <th>&nbsp;</th>
                     </tr>
@@ -39,9 +39,9 @@
                                 <td>{{ $empresa->correo }}</td>
                                 <td>{{ $empresa->direccion }}</td>
                                 <td>{{ $empresa->telefono }}</td>
+                                <td>{{ $empresa->etapa }}</td>
                                 <td>{{ $empresa->telefono }}</td>
-                                <td>{{ $empresa->telefono }}</td>
-                                <td>{{ $empresa->telefono }}</td>
+                                
                                
                                 <td>
                                     <a href="{{ route('empresas.show',[$empresa->id]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.view')</a>
