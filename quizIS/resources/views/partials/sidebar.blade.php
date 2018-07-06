@@ -11,12 +11,14 @@
                     <span class="title">Home</span>
                 </a>
             </li>
+           
             <li class="{{ $request->segment(1) == 'tests' ? 'active' : '' }}">
                 <a href="{{ route('tests.index') }}">
                     <i class="fa fa-graduation-cap"></i>
                     <span class="title">@lang('quickadmin.test.new')</span>
                 </a>
             </li>
+            
             <li class="{{ $request->segment(1) == 'results' ? 'active' : '' }}">
                 <a href="{{ route('results.index') }}">
                     <i class="fa fa-check"></i>

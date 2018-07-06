@@ -73,9 +73,7 @@
             </div>
 
             <p>&nbsp;</p>
-
-            <a href="{{ route('tests.index') }}" class="btn btn-default">Take another quiz</a>
-            <a href="{{ route('results.index') }}" class="btn btn-default">See all my results</a>
+            <a href="{{ route('results.index') }}" class="btn btn-default">Ver mis resultados</a>
         </div>
     </div>
 @stop
