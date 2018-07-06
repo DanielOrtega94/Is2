@@ -8,7 +8,7 @@
 
 
 
-            <li class="{{ $request->segment(1) == 'tests' ? 'active' : '' }}">
+            <li class="{{ $request->segment(1) == 'home' ? 'active' : '' }}">
                 <a href="{{ url('/') }}"">
                     <i class="fa fa-home"></i>
                     <span class="title">Home</span>
@@ -89,7 +89,7 @@
                 </a>
             </li>
         -->
-            <li>
+            <li class="{{ $request->segment(1) == 'users' ? 'active' : '' }}">
                 <a href="#">
                     <i class="fa fa-users"></i>
                     <span class="title">@lang('quickadmin.user-management.title')</span>

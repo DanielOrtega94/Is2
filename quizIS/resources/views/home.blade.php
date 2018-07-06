@@ -61,7 +61,7 @@
             
         </div>
     </div>
-@endif
+@else
  <div class="row">
         <div class="col-md-10">
             <div class="panel panel-default">
@@ -110,5 +110,5 @@
 
 
 
-
+@endif
 @endsection
