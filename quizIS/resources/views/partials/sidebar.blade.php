@@ -31,7 +31,8 @@
             @if(Auth::user()->isAdmin()==FALSE)
             <li class="{{ $request->segment(1) == 'miempresa' ? 'active' : '' }}">
                 <a href="{{ route('miempresa.index') }}">
-                    <i class="fa fa-check"></i>
+                    <i class="fa fa-building" aria-hidden="true"
+                    ></i>
                     <span class="title">@lang('quickadmin.empresa.title1')</span>
                 </a>
             </li>
@@ -89,7 +90,7 @@
                 </a>
             </li>
         -->
-            <li class="{{ $request->segment(1) == 'roles' || 'users' || 'user_actions' ? 'active active-sub' : '' }}">
+            <li>
                 <a href="#">
                     <i class="fa fa-users"></i>
                     <span class="title">@lang('quickadmin.user-management.title')</span>

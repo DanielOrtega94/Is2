@@ -14,11 +14,11 @@
                     <table class="table table-bordered table-striped">
                         <tr><th>@lang('quickadmin.etapa.fields.title')</th>
                             <th>Descripcion</th>
-                            <th>Requisitos</th>
+                           
                         </tr>
                     <td>{{ $etapas->Nombre }}</td>
-<td>{{ $etapas->descripcion }}</td>
-<td>{{ $etapas->requisitos }}</td>
+                    <td>{{ $etapas->descripcion }}</td>
+
                 </tr>
 
                     </table>

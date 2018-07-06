@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 @if($usuario)
     <div class="row">
         <div class="col-md-10">
@@ -66,10 +67,11 @@
         <div class="col-md-10">
             <div class="panel panel-default">
                 <div class="panel-heading"><h3>Bienvenido, aqui puedes ver un resumen</h3></div>
-               
-@if(!is_null($empresa) )
    
-             <div class="panel-body">
+
+
+@if(is_null($empresa) )
+            <div class="panel-body">
                     <div class="row">
                         <div class="col-md-3 text-center">
                             <h1>{{ $idea }}</h1>
@@ -81,11 +83,17 @@
                         </div>
                           </div>
     </div>
- 
-@endif
+            </div>
 
-@if(is_null($empresa) )
-<div class="panel-body">
+
+
+@else         
+
+   
+ 
+
+
+            <div class="panel-body">
 
                     <div class="row">
                         <div class="col-md-3 text-center">
@@ -94,14 +102,11 @@
         <a href="{{ route('miempresa.create') }}" class="btn btn-success">@lang('quickadmin.add_new')</a>
     </p>
 
-                        </div>
-                          </div>
-            </div>
-
-
+        </div>
+      </div>
 @endif
 
-      
+
 
                 </div>
             </div>

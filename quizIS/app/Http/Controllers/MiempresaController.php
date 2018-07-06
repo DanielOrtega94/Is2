@@ -20,7 +20,7 @@ class MiempresaController extends Controller
     {
         $id = Auth::user()->getId();
        
-         $empresas = DB::table('empresas')->where('user_id', '=', $id)->get();
+         $empresas = DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->get();
 
 
         return view('miempresa.index',compact('empresas'));
@@ -66,9 +66,8 @@ class MiempresaController extends Controller
     public function show($id)
     {
 
-         //$empresa = DB::table('empresas')->where('Nombre', '=', $id)->get();
-         $empresa = Empresa::findOrFail($id);
-        return view('miempresa.show', compact('empresa'));
+        $empresa = Empresa::findOrFail($id);
+        return view('empresa.show', compact('empresa'));
     }
 
     /**
@@ -84,7 +83,7 @@ class MiempresaController extends Controller
          
         #$etapas = etapa::findOrFail($Nombre);
 
-        return view('miempresa.edit', compact('empresas'));
+        return view('empresa.edit', compact('empresas'));
     }
 
     /**
@@ -108,10 +107,10 @@ class MiempresaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($Nombre)
     {
          $etapas = Empresa::findOrFail($Nombre);
-        $etapas -> delete();
+         $etapas -> delete();
 
         return redirect()->route('miempresa.index');
     }

@@ -41,8 +41,8 @@ class HomeController extends Controller
         $expansion = DB::table('empresas')->where('etapa', '=', 'Temprana')->count();
         $temprana = DB::table('empresas')->where('etapa', '=', 'Expansión')->count();
         $internacionalizacion = DB::table('empresas')->where('etapa', '=', 'Internacionalización')->count(); 
-        $empresa= DB::table('empresas')->where('user_id', '=',$id);
-#        $nota=DB::table('empresas')->where('user_id', '=',$id)->select();
+        $empresa= DB::table('empresas')->where('user_id', '=',$id)->where('deleted_at','=',NULL);
+# $nota=DB::table('empresas')->where('user_id', '=',$id)->select();
         $etapa=DB::table('empresas')->where('user_id', '=',$id)->select('etapa');
 
 
