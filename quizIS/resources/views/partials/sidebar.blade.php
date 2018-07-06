@@ -89,14 +89,16 @@
                 </a>
             </li>
         -->
-            <li class="{{ $request->segment(1) == 'users' ? 'active' : '' }}">
+            <li class="{{ $request->segment(1) == 'roles' || 'users' || 'user_actions' ? 'active active-sub' : '' }}">
                 <a href="#">
                     <i class="fa fa-users"></i>
                     <span class="title">@lang('quickadmin.user-management.title')</span>
                     <span class="fa arrow"></span>
                 </a>
                 <ul class="sub-menu">
-                    <li class="{{ $request->segment(1) == 'roles' ? 'active active-sub' : '' }}">
+                   <li class="{{ $request->segment(1) == 'roles' ? 'active active-sub' : '' }}">
+                   
+
                         <a href="{{ route('roles.index') }}">
                             <i class="fa fa-briefcase"></i>
                             <span class="title">
