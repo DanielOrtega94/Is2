@@ -9,6 +9,7 @@ use App\Test;
 use App\User;
 use Illuminate\Http\Request;
 use DB;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -29,6 +30,8 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $usuario=Auth::user()->isAdmin();
+        $id=Auth::user()->select('id');
         $questions = Question::count();
         $users = User::whereNull('role_id')->count();
         $quizzes = Test::count();
@@ -38,6 +41,14 @@ class HomeController extends Controller
         $expansion = DB::table('empresas')->where('etapa', '=', 'Temprana')->count();
         $temprana = DB::table('empresas')->where('etapa', '=', 'Expansión')->count();
         $internacionalizacion = DB::table('empresas')->where('etapa', '=', 'Internacionalización')->count(); 
-        return view('home', compact('questions', 'users', 'quizzes', 'average','idea','semilla','expansion','temprana','internacionalizacion'));
+        $empresa= DB::table('empresas')->where('user_id', '=',$id);
+#        $nota=DB::table('empresas')->where('user_id', '=',$id)->select();
+        $etapa=DB::table('empresas')->where('user_id', '=',$id)->select('etapa');
+
+
+
+
+
+        return view('home', compact('questions', 'users', 'quizzes', 'average','idea','semilla','expansion','temprana','internacionalizacion','usuario','etapa','empresa'));
     }
 }

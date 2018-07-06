@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@if($usuario)
     <div class="row">
         <div class="col-md-10">
             <div class="panel panel-default">
@@ -60,4 +61,54 @@
             
         </div>
     </div>
+@endif
+ <div class="row">
+        <div class="col-md-10">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3>Bienvenido, aqui puedes ver un resumen</h3></div>
+               
+@if(!is_null($empresa) )
+   
+             <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-3 text-center">
+                            <h1>{{ $idea }}</h1>
+                            Tu Nota es
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <h1>{{ $semilla }}</h1>
+                            Tu etapa es
+                        </div>
+                          </div>
+    </div>
+ 
+@endif
+
+@if(is_null($empresa) )
+<div class="panel-body">
+
+                    <div class="row">
+                        <div class="col-md-3 text-center">
+                            Porfavor registre una empresa, para mostrar un resumen
+                          <p>
+        <a href="{{ route('miempresa.create') }}" class="btn btn-success">@lang('quickadmin.add_new')</a>
+    </p>
+
+                        </div>
+                          </div>
+            </div>
+
+
+@endif
+
+      
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
 @endsection
