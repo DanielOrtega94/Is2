@@ -2,13 +2,15 @@
 
 @section('content')
     <div class="row">
+        <h1 class="text-center" style="color: white"><img  src="/images/aceleralatam.png"></h1>
         <div class="col-md-8 col-md-offset-2">
+
             <div class="panel panel-default">
-                <div class="panel-heading">Reset password</div>
+                <div class="panel-heading">Reestablecer Contraseña</div>
                 <div class="panel-body">
                     @if (count($errors) > 0)
                         <div class="alert alert-danger">
-                            <strong>Whoops!</strong> There were problems with input:
+                            <strong>Whoops!</strong> Hay problemas con lo ingresado:
                             <br><br>
                             <ul>
                                 @foreach ($errors->all() as $error)
@@ -48,7 +50,7 @@
                                 <button type="submit"
                                         class="btn btn-primary"
                                         style="margin-right: 15px;">
-                                    Reset password
+                                    Reiniciar Contraseña
                                 </button>
                             </div>
                         </div>

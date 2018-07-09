@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Auth;
+use DB;
 use App\Test;
 use App\TestAnswer;
 use Illuminate\Http\Request;
@@ -28,8 +29,12 @@ class ResultsController extends Controller
         if (!Auth::user()->isAdmin()) {
             $results = $results->where('user_id', '=', Auth::id());
         }
+        $id = Auth::user()->getId();
+        $empresas = DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->get();
+        # $nota=DB::table('empresas')->where('user_id', '=',$id)->select();
+        $etapa=DB::table('empresas')->where('user_id', '=',$id)->select('etapa');
 
-        return view('results.index', compact('results'));
+        return view('results.index', compact('results','id','empresas','etapa'));
     }
 
     /**
