@@ -619,6 +619,1195 @@ class PreguntaSeeder extends Seeder
                 'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);
+               DB::table('questions')->insert([
+                
+                'topic_id' => 2,
+                'etapa_id' => 1,
+                'question_text' =>'¿Tiene Mision y vision?',
+                 'answer_explanation' =>'',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+               DB::table('questions')->insert([
+                
+                'topic_id' => 2,
+                'etapa_id' => 1,
+                'question_text' =>'¿Tiene Analisis FODA?',
+                 'answer_explanation' =>'',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+               DB::table('questions')->insert([
+                
+                'topic_id' => 2,
+                'etapa_id' => 1,
+                'question_text' =>'¿Tiene Definicion de objetivos y metas?',
+                 'answer_explanation' =>'',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+               DB::table('questions')->insert([
+                
+                'topic_id' => 2,
+                'etapa_id' => 1,
+                'question_text' =>'¿Tiene Identificacion de proveedores y clientes?',
+                 'answer_explanation' =>'',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+               DB::table('questions')->insert([
+                
+                'topic_id' => 2,
+                'etapa_id' => 1,
+                'question_text' =>'¿Tiene Organigrama actualizado?',
+                 'answer_explanation' =>'',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+               DB::table('questions')->insert([
+                
+                'topic_id' => 2,
+                'etapa_id' => 1,
+                'question_text' =>'¿Tiene Descripciones de cargo asociadas a responsables y recursos de la Compañía?',
+                 'answer_explanation' =>'',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+               DB::table('questions')->insert([
+                
+                'topic_id' => 2,
+                'etapa_id' => 1,
+                'question_text' =>'¿Tiene CV’s de recursos?',
+                 'answer_explanation' =>'',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+               DB::table('questions')->insert([
+                
+                'topic_id' => 2,
+                'etapa_id' => 1,
+                'question_text' =>'¿Tiene Evaluaciones de desempeño?',
+                 'answer_explanation' =>'',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+               DB::table('questions')->insert([
+                
+                'topic_id' => 2,
+                'etapa_id' => 1,
+                'question_text' =>'¿Conoce usted cuantificado la capacidad de producccion/prestacion de productos o servicios?',
+                 'answer_explanation' =>'Descripción de la capacidad operativa de la Compañía ',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+               DB::table('questions')->insert([
+                
+                'topic_id' => 2,
+                'etapa_id' => 1,
+                'question_text' =>'¿Ha enlistado los factores criticos que posee su operación?',
+                 'answer_explanation' =>'Factores críticios para la operación',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+               DB::table('questions')->insert([
+                
+                'topic_id' => 2,
+                'etapa_id' => 1,
+                'question_text' =>'¿Su producto/servicio posee una ventaja competitiva con respecto a su competencia?',
+                 'answer_explanation' =>'Ventaja competitiva del producto/servicio',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+               DB::table('questions')->insert([
+                
+                'topic_id' => 2,
+                'etapa_id' => 1,
+                'question_text' =>'¿Ha identificado los principales actores del mercado en que se encuentra a nivel regional o nacional?',
+                 'answer_explanation' =>'Principales actores del mercado a nivel regional/nacional, según participación.',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+               DB::table('questions_options')->insert([
+                
+                'question_id' => 22,
+                'option' => 'Un elemento',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 22,
+                'option' => 'Dos elemento',
+                 'puntaje' => 3,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 22,
+                'option' => 'Tres elemento',
+                 'puntaje' => 4,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 22,
+                'option' => 'Cuatro elementos',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 23,
+                'option' => 'Un elemento',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 23,
+                'option' => 'Dos elemento',
+                 'puntaje' => 3,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 23,
+                'option' => 'Tres elemento',
+                 'puntaje' => 4,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 23,
+                'option' => 'Cuatro elementos',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 24,
+                'option' => 'Un elemento',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 24,
+                'option' => 'Dos elemento',
+                 'puntaje' => 3,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 24,
+                'option' => 'Tres elemento',
+                 'puntaje' => 4,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 24,
+                'option' => 'Cuatro elementos',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 25,
+                'option' => 'Un elemento',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 25,
+                'option' => 'Dos elemento',
+                 'puntaje' => 3,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 25,
+                'option' => 'Tres elemento',
+                 'puntaje' => 4,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 25,
+                'option' => 'Cuatro elementos',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 26,
+                'option' => 'No',
+                 'puntaje' => 1,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 26,
+                'option' => 'Si, pero no actualizado dentro de los ultimos 6 meses',
+                 'puntaje' => 3,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 26,
+                'option' => 'Si, actualizado dentro de los ultimos 6 meses',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 27,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 27,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 28,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 28,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 29,
+                'option' => 'Si y formal',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 29,
+                'option' => 'Si, pero informal',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 29,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 30,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 30,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 31,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 31,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 32,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 32,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 33,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 33,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 3,
+                'etapa_id' => 1,
+                'question_text' =>'¿Ha realizado planificacion de gastos destinados para Marketing y Ventas?',
+                 'answer_explanation' =>'Presupuesto para MKT y Promoción',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 3,
+                'etapa_id' => 1,
+                'question_text' =>'¿Tiene un plan de Marketing elaborado?',
+                 'answer_explanation' =>'Plan de MKT y Promoción',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 3,
+                'etapa_id' => 1,
+                'question_text' =>'¿Posee un portafolio de productos/servicios ?',
+                 'answer_explanation' =>'Portafolio de productos y servicios',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 3,
+                'etapa_id' => 1,
+                'question_text' =>'¿Tiene control de la facturacion total en los ultimos 6 meses?',
+                 'answer_explanation' =>'Facturación total',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 3,
+                'etapa_id' => 1,
+                'question_text' =>'¿Las ventas poseen un crecimiento en los ultimos 6 meses?',
+                 'answer_explanation' =>'Crecimiento de ventas / facturación',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 3,
+                'etapa_id' => 1,
+                'question_text' =>'¿Tiene control de la facturacion por producto en los ultimos 6 meses?',
+                 'answer_explanation' =>'Facturación por producto / servicio',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 3,
+                'etapa_id' => 1,
+                'question_text' =>'¿Ha identificado clientes en los ultimos 2 meses?',
+                 'answer_explanation' =>'Nuevos clientes',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 3,
+                'etapa_id' => 1,
+                'question_text' =>'¿Ha elaborado su estrategia comercial para el presente año?',
+                 'answer_explanation' =>'Estrategia Comercial',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 3,
+                'etapa_id' => 1,
+                'question_text' =>'¿Ha elaborado su plan comercial para el presente año?',
+                 'answer_explanation' =>'Plan Comercial',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 3,
+                'etapa_id' => 1,
+                'question_text' =>'¿Ha asignado metas comerciales para el presente año?',
+                 'answer_explanation' =>'Metas comerciales',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 3,
+                'etapa_id' => 1,
+                'question_text' =>'¿Ha desarrollado actividades para el cumplimiento de metas ?',
+                 'answer_explanation' =>'Descripción de las principales actividades de gestión comercial de la compañía',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 3,
+                'etapa_id' => 1,
+                'question_text' =>'¿Lleva un seguimiento y control sobre la distribucion de las ventas geograficamente?',
+                 'answer_explanation' =>'Distribución geográfica de las ventas',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 3,
+                'etapa_id' => 1,
+                'question_text' =>'¿Tiene identificado sus canales de distribucion y asociados a estos qué productos  y Servicios?',
+                 'answer_explanation' =>'Canales de distribución',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 3,
+                'etapa_id' => 1,
+                'question_text' =>'¿Tiene registro de ventas por canal de distribucion?',
+                 'answer_explanation' =>'Ventas por canal de distribución',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 3,
+                'etapa_id' => 1,
+                'question_text' =>'¿Ha desarrollado un plan de incentivos para la venta en sus canales de distribución?',
+                 'answer_explanation' =>'Programa de incentivo a la venta en canales o alianzas',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 3,
+                'etapa_id' => 1,
+                'question_text' =>'¿Ha identificado y enlistado los principales competidores de la compañía?',
+                 'answer_explanation' =>'Listado de competidores',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 3,
+                'etapa_id' => 1,
+                'question_text' =>'¿Tiene identificados y clasificados los distribuidores de su producto?',
+                 'answer_explanation' =>'Listado de distribuidores',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 3,
+                'etapa_id' => 1,
+                'question_text' =>'¿Ha considerado todas las regulaciones necesarias para la comercializacion de su producto/servicio?',
+                 'answer_explanation' =>'Otra regulaciones y restricciones para el mercado local',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 34,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 34,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 35,
+                'option' => 'Si tengo un plan de Marketing para el año actual',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 35,
+                'option' => 'Si lo he realizado, pero hace mas de un año',
+                 'puntaje' => 3,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 35,
+                'option' => 'No',
+                 'puntaje' => 1,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 36,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 36,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 37,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 37,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 38,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 38,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 39,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 39,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 40,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 40,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 41,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 41,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 42,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 42,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 43,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 43,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 44,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 44,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 45,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 45,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 46,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 46,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 47,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 47,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 48,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 48,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 49,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 49,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 50,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 50,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 51,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 51,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 5,
+                'etapa_id' => 1,
+                'question_text' =>'¿Cree que su producto o servicio es una innovacion radical o incremental en su mercado objetivo ?',
+                 'answer_explanation' =>'Proceso',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 52,
+                'option' => 'No',
+                 'puntaje' => 1,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 52,
+                'option' => 'Incremental',
+                 'puntaje' => 3,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 52,
+                'option' => 'Radical',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 4,
+                'etapa_id' => 1,
+                'question_text' =>'¿Tiene Evaluacion de proyecto (Flujo de caja)?',
+                 'answer_explanation' =>'',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 4,
+                'etapa_id' => 1,
+                'question_text' =>'¿Tiene Capex (años a 0) Inversion?',
+                 'answer_explanation' =>'',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 4,
+                'etapa_id' => 1,
+                'question_text' =>'¿Tiene Capex + Opex  (Año 0 + primer año operación)?',
+                 'answer_explanation' =>'',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 4,
+                'etapa_id' => 1,
+                'question_text' =>'¿Posee Documentacion de los supuestos de evaluacion?',
+                 'answer_explanation' =>'',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions')->insert([
+                
+                'topic_id' => 4,
+                'etapa_id' => 1,
+                'question_text' =>'¿Tiene Reporte de Capital de Trabajo K?',
+                 'answer_explanation' =>'',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+               DB::table('questions')->insert([
+                
+                'topic_id' => 4,
+                'etapa_id' => 1,
+                'question_text' =>'¿Tiene Estados financieros (Desde inicio actividad comercial)?',
+                 'answer_explanation' =>'',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+               DB::table('questions')->insert([
+                
+                'topic_id' => 4,
+                'etapa_id' => 1,
+                'question_text' =>'¿Tiene Cuentas por Cobrar (Desde inicio actividad comercial)?',
+                 'answer_explanation' =>'',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+               DB::table('questions')->insert([
+                
+                'topic_id' => 4,
+                'etapa_id' => 1,
+                'question_text' =>'¿Tiene Cuentas por Pagar (Desde inicio actividad comercial)?',
+                 'answer_explanation' =>'',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+               DB::table('questions')->insert([
+                
+                'topic_id' => 4,
+                'etapa_id' => 1,
+                'question_text' =>'¿Posee Libros de compra y ventas (Desde inicio actividad comercial)?',
+                 'answer_explanation' =>'',
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+               DB::table('questions_options')->insert([
+                
+                'question_id' => 53,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 53,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 54,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 54,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 55,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 55,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 56,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 56,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 57,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 57,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 58,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 58,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 59,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 59,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 60,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 60,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 61,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 61,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+
 
     }
 }
