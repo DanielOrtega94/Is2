@@ -16,17 +16,8 @@ class PreguntaSeeder extends Seeder
                 
                 'topic_id' => 1,
                 'etapa_id' => 1,
+                'ponderation' =>10,
                 'question_text' =>'¿Tiene Modelo de negocio?',
-                 'answer_explanation' =>'ideas sobre modelo negocio',
-                'created_at' => new DateTime('now'),
-               'updated_at'=> new DateTime,
-           ]);	
-
-       DB::table('questions')->insert([
-
-                'topic_id' => 2,
-                'etapa_id' => 1,
-                'question_text' =>'Describa sus segmento de clientes',
                  'answer_explanation' =>'ideas sobre modelo negocio',
                 'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
@@ -36,6 +27,7 @@ class PreguntaSeeder extends Seeder
                 
                 'topic_id' => 1,
                 'etapa_id' => 1,
+                'ponderation' =>20,
                 'question_text' =>'¿Ha identificado productos/servicios sustitutos a su producto/servicio en el mercado?',
                  'answer_explanation' =>'Descripción los principales aspectos de su idea de negocio, proyecto y estrategia o modelo de negocios.',
                 'created_at' => new DateTime('now'),
@@ -46,6 +38,7 @@ class PreguntaSeeder extends Seeder
                 
                 'topic_id' => 1,
                 'etapa_id' => 1,
+                'ponderation' =>30,
                 'question_text' =>'¿Tiene presentación descritiva de la idea de negocios?',
                  'answer_explanation' =>'',
                 'created_at' => new DateTime('now'),
@@ -56,6 +49,7 @@ class PreguntaSeeder extends Seeder
                 
                 'topic_id' => 1,
                 'etapa_id' => 1,
+                'ponderation' =>40,
                 'question_text' =>'¿Ha identificado, seleccionado o desechado segmentos de clientes en relacion a las propuestas de valor?',
                  'answer_explanation' =>'Definición de los grupos de clientes que tu negocio ataca',
                 'created_at' => new DateTime('now'),
