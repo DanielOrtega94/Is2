@@ -27,7 +27,13 @@ class QuestionsController extends Controller
     public function index()
     {
         $questions = Question::all();
-        
+
+        foreach ($questions as $question) {
+        $nombre_topico=$question['topic_id'];    
+        $nombre_etapa=$question['etapa_id'];
+        $question['etapa_id']= DB::table('etapas')->where('id','=',$nombre_etapa)->select('Nombre')->get()->pluck('Nombre');
+        $question['topic_id']= DB::table('topics')->select('title')->where('id','=',$nombre_etapa)->get()->pluck('title');
+        }
 
         return view('questions.index', compact('questions'));
     }

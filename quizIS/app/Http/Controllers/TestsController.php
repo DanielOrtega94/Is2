@@ -17,6 +17,8 @@ use App\Http\Requests\StoreTestRequest;
 
 class TestsController extends Controller
 {
+
+
     /**
      * Display a new test.
      *

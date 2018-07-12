@@ -26,8 +26,8 @@
                 @foreach ($questions as $question)
                 <tr data-entry-id="{{ $question->id }}">
                     <td></td>
-                    <td>{!! $question->topic->idetapa !!}</td>
-                    <td>{{ $question->topic->title or '' }}</td>
+                    <td>{!! $question->etapa_id[0]!!}</td>
+                    <td>{{ $question->topic_id[0] or '' }}</td>
                     <td>{!! $question->question_text !!}</td>
                     
                     <td>

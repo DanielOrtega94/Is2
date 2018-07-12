@@ -13,7 +13,7 @@
             </li>
            
 
-            @if(Auth::user()->isAdmin()==true and $id = Auth::user()->getId() and count(DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->get())>0)
+            @if(Auth::user()->isAdmin()==False and $id = Auth::user()->getId() and count(DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->get())>0)
             <li class="{{ $request->segment(1) == 'tests' ? 'active' : '' }}">
                 <a href="{{ route('tests.index') }}">
                     <i class="fa fa-graduation-cap"></i>
