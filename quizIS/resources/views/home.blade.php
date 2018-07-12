@@ -64,25 +64,26 @@
     <div class="col-md-10">
         <div class="panel panel-default">
             <div class="panel-heading"><h3>Bienvenido, aqui puedes ver un resumen</h3></div>
-            @if(count($empresas)>0 && $test==FALSE)
+            @if(count($empresas)>0 && $test[0]==1)
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-3 text-center">
-                        <h1>{{ $idea }}</h1>
                         Tu Nota es
+                        <h1>{{ $nota[0] }}</h1>
                     </div>
                     <div class="col-md-3 text-center">
-                        <h1>{{ $semilla }}</h1>
                         Tu etapa es
+                        <h1>{{ $etapa[0] }}</h1>
                     </div>
                 </div>
             </div>
         </div>
-         @elseif(count($empresas)>0 and $test==TRUE)
+         @elseif(count($empresas)>0 and $test[0]==0)
         <div class="row" style="text-align: center">
                 <div class="text-center">
                     Porfavor empieze el diagnostico, para poder mostrar un resumen
                     <p>
+
                      <a href="{{ route('tests.index') }}" class="btn btn-success">Empezar Quiz</a>
                     </p>
                 </div>

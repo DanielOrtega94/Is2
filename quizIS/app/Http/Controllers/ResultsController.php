@@ -31,9 +31,9 @@ class ResultsController extends Controller
         }
         $id = Auth::user()->getId();
         $empresas = DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->get();
-        $nota=DB::table('empresas')->where('user_id', '=',$id)->pluck('nota');
-        $etapas=DB::table('empresas')->where('user_id', '=',$id)->select('etapa')->get();
-        $etapa=DB::table('etapas')->where('id','=',$id)->pluck('Nombre');
+        $nota=DB::table('empresas')->where('user_id', '=',$id)->where('deleted_at','=',NULL)->pluck('nota');
+        $etapas=DB::table('empresas')->where('user_id', '=',$id)->where('deleted_at','=',NULL)->pluck('etapa');
+        $etapa=DB::table('etapas')->where('id','=',$etapas[0])->pluck('Nombre');
         return view('results.index', compact('results','id','empresas','etapa','nota'));
     }
 
