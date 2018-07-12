@@ -14,7 +14,8 @@
                     <table class="table table-bordered table-striped">
                         <tr><th>Pregunta</th>
                     <td>{{ $questions_option->question->question_text or '' }}</td></tr><tr><th>Opción</th>
-                    <td>{{ $questions_option->option }}</td></tr><tr><th>Puntaje</th>
+                    <td>{{ $questions_option->option }}</td></tr>
+                    <tr><th>Puntaje</th>
                     <td>{{ $questions_option->puntaje }}</td></tr>
                     </table>
                 </div>
@@ -22,7 +23,8 @@
 
             <p>&nbsp;</p>
 
-            <a href="{{ route('questions_options.index') }}" class="btn btn-default">@lang('quickadmin.back_to_list')</a>
+            <a href="{{ route('questions.index') }}" class="btn btn-default">@lang('quickadmin.back_to_list')</a>
+       
         </div>
     </div>
 @stop

@@ -13,22 +13,23 @@
             </li>
            
 
-
+            @if(Auth::user()->isAdmin()==true and $id = Auth::user()->getId() and count(DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->get())>0)
             <li class="{{ $request->segment(1) == 'tests' ? 'active' : '' }}">
                 <a href="{{ route('tests.index') }}">
                     <i class="fa fa-graduation-cap"></i>
-                    <span class="title">@lang('quickadmin.test.new')</span>
+                    <span class="title">Iniciar Diagnostico</span>
                 </a>
             </li>
-  
+            @endif
 
-            
+    
             <li class="{{ $request->segment(1) == 'results' ? 'active' : '' }}">
                 <a href="{{ route('results.index') }}">
                     <i class="fa fa-check"></i>
                     <span class="title">@lang('quickadmin.results.title')</span>
                 </a>
             </li>
+      
             @if(Auth::user()->isAdmin()==FALSE)
             <li class="{{ $request->segment(1) == 'miempresa' ? 'active' : '' }}">
                 <a href="{{ route('miempresa.index') }}">

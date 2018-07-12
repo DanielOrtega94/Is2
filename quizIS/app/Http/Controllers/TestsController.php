@@ -75,9 +75,8 @@ class TestsController extends Controller
 
     }*/
 
-    public function select(SelectEtapaRequest $request){
+    public function select($id){
 
-      $id = $request->id;
       $user = Auth::user()->getId();
       $empresa = Empresa::findOrFail($user);
       $questions = DB::table('questions')->where('etapa_id','=',$id)->get();

@@ -38,8 +38,24 @@ $expansion = DB::table('empresas')->where('etapa', '=', 'Temprana')->count();
 $temprana = DB::table('empresas')->where('etapa', '=', 'Expansión')->count();
 $internacionalizacion = DB::table('empresas')->where('etapa', '=', 'Internacionalización')->count();
 $empresas = DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->get();
+$test = DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->select('test');
 # $nota=DB::table('empresas')->where('user_id', '=',$id)->select();
 $etapa=DB::table('empresas')->where('user_id', '=',$id)->select('etapa');
-return view('home', compact('questions', 'users', 'quizzes', 'average','idea','semilla','expansion','temprana','internacionalizacion','usuario','etapa','empresas'));
+
+
+$total_ponderaciones=DB::table('questions')->sum('ponderation');
+$ponderacion_por_pregunta= DB::table('questions')->select('id','ponderation')->groupBy('id');
+$saco_ponderaciones = DB::table('questions_options')
+    ->select('question_id', DB::raw('max(puntaje) as puntaje'))
+    ->groupBy('question_id')
+    ->get();
+
+
+
+
+
+
+
+return view('home', compact('questions', 'users', 'quizzes', 'average','idea','semilla','expansion','temprana','internacionalizacion','usuario','etapa','empresas','test'));
 }
 }

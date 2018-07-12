@@ -19,6 +19,8 @@
                         <h1>{{ $quizzes }}</h1>
                         @lang('quickadmin.home.encuestas')
                     </div>
+
+
                     <div class="col-md-3 text-center">
                         <h1>{{ number_format($average, 2) }} / 10</h1>
                         @lang('quickadmin.home.promedio')
@@ -62,7 +64,7 @@
     <div class="col-md-10">
         <div class="panel panel-default">
             <div class="panel-heading"><h3>Bienvenido, aqui puedes ver un resumen</h3></div>
-            @if(count($empresas)>0)
+            @if(count($empresas)>0 && $test==FALSE)
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-3 text-center">
@@ -76,18 +78,30 @@
                 </div>
             </div>
         </div>
-        @elseif(count($empresas)==0)
-        <div class="panel-body">
-            <div class="row">
-                <div class="col-md-3 text-center">
-                    Porfavor registre una empresa, para mostrar un resumen
+         @elseif(count($empresas)>0 and $test==TRUE)
+        <div class="row" style="text-align: center">
+                <div class="text-center">
+                    Porfavor empieze el diagnostico, para poder mostrar un resumen
                     <p>
-                    <a href="{{ route('miempresa.create') }}" class="btn btn-success">@lang('quickadmin.add_new')</a>
+                     <a href="{{ route('tests.index') }}" class="btn btn-success">Empezar Quiz</a>
                     </p>
                 </div>
             </div>
-            @endif
         </div>
+        @elseif(count($empresas)==0 )
+        <div class="panel-body">
+            <div class="row" style="text-align: center">
+                <div class="text-center">
+                    Porfavor registre una empresa, para poder realizar el diagnostico
+
+                     
+                    <p>
+                    <a href="{{ route('miempresa.create') }}" class="btn btn-success">Registrar Empresa</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+            @endif
     </div>
 </div>
 @endif

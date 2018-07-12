@@ -37,6 +37,7 @@
                 </tr>
             </thead>
             <tbody>
+                 <h3 class="page-title">Opciones de la Preguntas</h3>
                 @if (count($questions_options) > 0)
                 @foreach ($questions_options as $questions_option)
                 <tr data-entry-id="{{ $questions_option->id }}">
