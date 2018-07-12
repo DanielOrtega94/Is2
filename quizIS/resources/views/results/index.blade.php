@@ -7,7 +7,7 @@
         @lang('quickadmin.list')
     </div>
     <div class="panel-body">
-        <table class="table table-bordered table-striped {{ count($results) > 0 ? 'datatable' : '' }}">
+        <table class="table table-bordered table-striped">
             <thead>
                 <tr>
                     
