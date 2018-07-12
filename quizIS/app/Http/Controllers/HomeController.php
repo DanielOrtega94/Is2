@@ -31,7 +31,7 @@ $usuario=Auth::user()->isAdmin();
 $id = Auth::user()->getId();
 $questions = Question::count();
 $users = User::where('role_id','<>','1')->count();
-$quizzes = Test::count();
+$quizzes = Test::where('user_id','<>','1')->count();
 $nota=Empresa::avg('nota');
 
 
@@ -46,8 +46,11 @@ $retorno = DB::table('empresas')->where('etapa', '=', '6')->where('deleted_at','
 
 
 $empresas = DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->get();
+$nota_empresa = $empresas->pluck('nota');
+
 $test = DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->pluck('test');
- $etapas=DB::table('empresas')->where('user_id', '=',$id)->where('deleted_at','=',NULL)->pluck('etapa');
+$etapas=DB::table('empresas')->where('user_id', '=',$id)->where('deleted_at','=',NULL)->pluck('etapa');
+$etapa_empresa = DB::table('etapas')->where('id','=',$etapas[0])->pluck('Nombre');
 
 
 
@@ -55,6 +58,7 @@ $test = DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=
 
 
 
-return view('home', compact('questions', 'users', 'quizzes', 'average','idea','semilla','expansion','temprana','retorno','internacionalizacion','usuario','etapas','empresas','test','nota'));
+
+return view('home', compact('questions', 'users', 'quizzes', 'average','idea','semilla','expansion','temprana','retorno','internacionalizacion','usuario','etapas','empresas','test','nota','nota_empresa','etapa_empresa'));
 }
 }

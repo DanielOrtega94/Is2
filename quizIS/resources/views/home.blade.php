@@ -7,23 +7,17 @@
             <div class="panel-heading">Bienvenido! Aqui se muestra un resumen</div>
             <div class="panel-body">
                 <div class="row">
-                    <div class="col-md-3 text-center">
+                    <div class="col-md-4 text-center">
                         <h1>{{ $questions }}</h1>
                         @lang('quickadmin.home.preguntas')
                     </div>
-                    <div class="col-md-3 text-center">
+                    <div class="col-md-4 text-center">
                         <h1>{{ $users }}</h1>
                         @lang('quickadmin.home.registrado')
                     </div>
-                    <div class="col-md-3 text-center">
+                    <div class="col-md-4 text-center">
                         <h1>{{ $quizzes }}</h1>
                         @lang('quickadmin.home.encuestas')
-                    </div>
-
-
-                    <div class="col-md-3 text-center">
-                        <h1>{{ number_format($nota, 2) }} / 7</h1>
-                        @lang('quickadmin.home.promedio')
                     </div>
                 </div>
             </div>
@@ -71,9 +65,13 @@
             @if(count($empresas)>0 && $test[0]==1)
             <div class="panel-body">
                 <div class="row">
-                    <div class="col-md-3 text-center">
-                        Tu Nota es
-                        <h1>{{ $nota[0] }}</h1>
+                    <div class="col-md-6 text-center">
+                        Tu Nota Actual es
+                        <h1>{{ $nota_empresa[0] }}</h1>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        Tu Etapa Actual es
+                        <h1>{{ $etapa_empresa[0] }}</h1>
                     </div>
                 </div>
             </div>

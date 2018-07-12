@@ -20,7 +20,7 @@
                 </tr>
             </thead>
             <tbody>
-                @if (count($results) > 0)
+                @if ($results)
                 @foreach ($results as $result)
                 <tr>
                     @if(Auth::user()->isAdmin())
