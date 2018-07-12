@@ -85,6 +85,7 @@ class TestsController extends Controller
        foreach ($questions as &$question) {
             $question->options = QuestionsOption::where('question_id', $question->id)->get();
         }
+        $empresa->update(['etapa'=>$id]);
 
     return view('tests.select', compact('dimensiones','empresa','questions'));
     }   
@@ -125,6 +126,7 @@ class TestsController extends Controller
         }
 
         $test->update(['result' => $result]);
+        $empresa = DB::table('empresas')->where('user_id','=',Auth::id())->update(['test'=>1]);
 
         return redirect()->route('results.show', [$test->id]);
     }

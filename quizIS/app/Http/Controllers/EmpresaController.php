@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Empresa;
+use DB;
 use App\Http\Requests\StoreEmpresaRequest;
 use App\Http\Requests\UpdateEmpresaRequest;
 
@@ -22,6 +23,10 @@ class EmpresaController extends Controller
     public function index()
     {
         $empresas = Empresa::all();
+         foreach ($empresas as $empresa) {
+            $etapa=$empresa['etapa'];
+            $empresa['etapa']= DB::table('etapas')->where('id','=',$etapa)->select('Nombre')->get()->pluck('Nombre');
+         }
 
         return view('empresas.index', compact('empresas'));
     }
@@ -97,6 +102,8 @@ class EmpresaController extends Controller
     public function show($Nombre)
     {
         $empresa = Empresa::findOrFail($Nombre);
+         $etapa=$empresa['etapa'];
+            $empresa['etapa']= DB::table('etapas')->where('id','=',$etapa)->select('Nombre')->get()->pluck('Nombre');
 
         return view('empresas.show', compact('empresa'));
     }
@@ -110,8 +117,9 @@ class EmpresaController extends Controller
      */
     public function destroy($Nombre)
     {
-        $etapas = Empresa::findOrFail($Nombre);
-        $etapas -> delete();
+        //$etapas = Empresa::findOrFail($Nombre);
+        //$etapas -> delete();
+        $etapas=DB::table('empresas')->where('id','=',$Nombre)->delete();
 
         return redirect()->route('empresas.index');
     }

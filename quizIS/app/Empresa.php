@@ -9,7 +9,7 @@ class Empresa extends Model
 {
      use SoftDeletes;
 
-    protected $fillable = ['Nombre','user_id','Correo','Direccion','Telefono','rut_juridica'];
+    protected $fillable = ['Nombre','user_id','Correo','Direccion','Telefono','rut_juridica','etapa','test'];
 
       public static function boot()
     {
