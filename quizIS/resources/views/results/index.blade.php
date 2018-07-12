@@ -53,12 +53,12 @@
          <div class="panel-body">
                 <div class="row">
                     <div class="col-md-3 text-center">
-                        <h1></h1>
                         Tu Nota es
+                        <h1>{{$nota[0]}}</h1>
                     </div>
                     <div class="col-md-3 text-center">
-                        <h1></h1>
                         Tu etapa es
+                        <h1>{{$etapa[0]}}</h1>
                     </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                     <td>{{ $result->user->name or '' }} ({{ $result->user->email or '' }})</td>
                   
                     <td>{{ $result->created_at or '' }}</td>
-                    <td>{{ $result->result }}/10</td>
+                    <td>{{ $result->result }}/7</td>
                     <td>
                         <a href="{{ route('results.show',[$result->id]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.view')</a>
                     </td>

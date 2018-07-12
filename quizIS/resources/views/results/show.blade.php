@@ -21,13 +21,13 @@
                     </tr>
                     <tr>
                         <th>@lang('quickadmin.results.fields.result')</th>
-                        <td>{{ $test->result }}/10</td>
+                        <td>{{ $test->result }}/7</td>
                     </tr>
                 </table>
                 <?php $i = 1 ?>
                 @foreach($results as $result)
                 <table class="table table-bordered table-striped">
-                    <tr class="test-option{{ $result->correct ? '-true' : '-false' }}">
+                    <tr>
                         <th style="width: 10%">Question #{{ $i }}</th>
                         <th>{{ $result->question->question_text or '' }}</th>
                     </tr>
