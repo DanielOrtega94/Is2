@@ -107,14 +107,28 @@ class TestsController extends Controller
             'result'  => $result,
         ]);
 
+        $puntaje_maximo = 0; 
+        $etapa = DB::table('empresas')->where('user_id','=',Auth::id())->select('etapa')->pluck('etapa');
+        $questions  = DB::table('questions')->where('etapa_id','=',$etapa[0])->get();
+        foreach ($questions as $q) {
+            $puntaje_max = DB::table('questions_options')->where('question_id','=',$q->id)->select(DB::raw('max(puntaje) as puntaje'))->pluck('puntaje');
+            $puntaje_maximo += $puntaje_max[0];
+        }
+        //$total_ponderaciones=DB::table('questions')->where('')->sum('ponderation');
+        //$ponderacion_por_pregunta= DB::table('questions')->select('id','ponderation')->groupBy('id');
+        //$saco_ponderaciones = DB::table('questions_options')
+    //->select('question_id', DB::raw('max(puntaje) as puntaje'))
+    //->groupBy('question_id')
+    //->get();
+
         foreach ($request->input('questions', []) as $key => $question) {
             $status = 0;
 
             if ($request->input('answers.'.$question) != null
-                && QuestionsOption::find($request->input('answers.'.$question))->correct
+                && QuestionsOption::find($request->input('answers.'.$question))->puntaje
             ) {
                 $status = 1;
-                $result++;
+                $result+= QuestionsOption::find($request->input('answers.'.$question))->puntaje;
             }
             TestAnswer::create([
                 'user_id'     => Auth::id(),
@@ -125,8 +139,10 @@ class TestsController extends Controller
             ]);
         }
 
+        $result = ($result*7)/$puntaje_maximo;
+
         $test->update(['result' => $result]);
-        $empresa = DB::table('empresas')->where('user_id','=',Auth::id())->update(['test'=>1]);
+        $empresa = DB::table('empresas')->where('user_id','=',Auth::id())->update(['test'=>1 , 'nota' => $result]);
 
         return redirect()->route('results.show', [$test->id]);
     }

@@ -93,9 +93,9 @@
             var b = document.getElementById("pmv");
             var valB = b.options[b.selectedIndex].value;
             var c = document.getElementById("venta");
-            var valC = a.options[c.selectedIndex].value;
+            var valC = c.options[c.selectedIndex].value;
             var d = document.getElementById("monto");
-            var valD = a.options[d.selectedIndex].value;
+            var valD = d.options[d.selectedIndex].value;
             
             var etapa = "Idea";
             var id = 1;
