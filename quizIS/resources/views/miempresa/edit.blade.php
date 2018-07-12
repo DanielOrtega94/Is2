@@ -25,7 +25,7 @@
                     {!! Form::text('Direccion', $empresas->direccion, ['class' => 'form-control', 'placeholder' => '']) !!}
 
                     {!! Form::label('Telefono', 'Telefono', ['class' => 'control-label']) !!}
-                    {!! Form::text('Telefono', $empresas->direccion, ['class' => 'form-control', 'placeholder' => '']) !!}
+                    {!! Form::text('Telefono', $empresas->telefono, ['class' => 'form-control', 'placeholder' => '']) !!}
 
                     {!! Form::label('rut_persona', 'Rut Persona Juridica', ['class' => 'control-label']) !!}
                     {!! Form::text('rut_juridica', $empresas->rut_juridica, ['class' => 'form-control', 'placeholder' => '']) !!}

@@ -48,15 +48,13 @@ $retorno = DB::table('empresas')->where('etapa', '=', '6')->where('deleted_at','
 $empresas = DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->get();
 $test = DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->pluck('test');
  $etapas=DB::table('empresas')->where('user_id', '=',$id)->where('deleted_at','=',NULL)->pluck('etapa');
-if(empty($etapas)) {
-        $etapa=DB::table('etapas')->where('id','=',$etapas[0])->pluck('Nombre');
-}
 
 
 
 
 
 
-return view('home', compact('questions', 'users', 'quizzes', 'average','idea','semilla','expansion','temprana','retorno','internacionalizacion','usuario','etapa','empresas','test','nota'));
+
+return view('home', compact('questions', 'users', 'quizzes', 'average','idea','semilla','expansion','temprana','retorno','internacionalizacion','usuario','etapas','empresas','test','nota'));
 }
 }

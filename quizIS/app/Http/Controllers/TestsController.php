@@ -140,9 +140,10 @@ class TestsController extends Controller
         }
 
         $result = ($result*7)/$puntaje_maximo;
+        $final = round( $result, 1, PHP_ROUND_HALF_UP);
 
-        $test->update(['result' => $result]);
-        $empresa = DB::table('empresas')->where('user_id','=',Auth::id())->update(['test'=>1 , 'nota' => $result]);
+        $test->update(['result' => $final]);
+        $empresa = DB::table('empresas')->where('user_id','=',Auth::id())->update(['test'=>1 , 'nota' => $final]);
 
         return redirect()->route('results.show', [$test->id]);
     }
