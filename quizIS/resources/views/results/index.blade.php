@@ -12,8 +12,10 @@
                 <tr>
                     
                     <th>@lang('quickadmin.results.fields.user')</th>
-                    <th>@lang('quickadmin.results.fields.date')</th>
-                    <th>Result</th>
+                    
+                      <th<th>Etapa</th>
+                    <th>@lang('quickadmin.results.fields.user')</th>
+                    <th>Nota</th>
                     <th>&nbsp;</th>
                 </tr>
             </thead>
@@ -24,8 +26,9 @@
                     @if(Auth::user()->isAdmin())
                     <td>{{ $result->user->name or '' }} ({{ $result->user->email or '' }})</td>
                     @endif
-                    <td>{{ $result->created_at or '' }}</td>
-                    <td>{{ $result->result }}/7</td>
+                   <!-- <td>{{ $fechas->created_at or '' }}</td>-->
+                    <td>{{ $result->nota }}/7</td>
+                    <td>{{ $result->nota }}/7</td>
                     <td>
                         <a href="{{ route('results.show',[$result->id]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.view')</a>
                     </td>

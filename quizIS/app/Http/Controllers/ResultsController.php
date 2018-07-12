@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Auth;
 use DB;
+use App\Empresa;
 use App\Test;
 use App\TestAnswer;
 use Illuminate\Http\Request;
@@ -24,17 +25,25 @@ class ResultsController extends Controller
      */
     public function index()
     {
-        $results = Test::all()->load('user');
+        $fechas = Test::all()->load('user');
+        $results = Empresa::whereNull('deleted_at');
 
         if (!Auth::user()->isAdmin()) {
             $results = $results->where('user_id', '=', Auth::id());
         }
         $id = Auth::user()->getId();
+
         $empresas = DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->get();
         $nota=DB::table('empresas')->where('user_id', '=',$id)->where('deleted_at','=',NULL)->pluck('nota');
         $etapas=DB::table('empresas')->where('user_id', '=',$id)->where('deleted_at','=',NULL)->pluck('etapa');
+        if(empty($etapas)) {
         $etapa=DB::table('etapas')->where('id','=',$etapas[0])->pluck('Nombre');
-        return view('results.index', compact('results','id','empresas','etapa','nota'));
+        }
+        else{
+
+        $etapa=["Vacio",""];
+        }
+        return view('results.index', compact('results','id','empresas','etapa','nota','fechas'));
     }
 
     /**

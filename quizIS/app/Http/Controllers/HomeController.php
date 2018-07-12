@@ -5,6 +5,7 @@ use App\Question;
 use App\Result;
 use App\Test;
 use App\User;
+use App\Empresa;
 use Illuminate\Http\Request;
 use DB;
 use Auth;
@@ -29,24 +30,33 @@ public function index()
 $usuario=Auth::user()->isAdmin();
 $id = Auth::user()->getId();
 $questions = Question::count();
-$users = User::whereNull('role_id')->count();
+$users = User::where('role_id','<>','1')->count();
 $quizzes = Test::count();
-$average = Test::avg('result');
-$idea = DB::table('empresas')->where('etapa', '=', 'Idea')->count();
-$semilla = DB::table('empresas')->where('etapa', '=', 'Semilla')->count();
-$expansion = DB::table('empresas')->where('etapa', '=', 'Temprana')->count();
-$temprana = DB::table('empresas')->where('etapa', '=', 'Expansión')->count();
-$internacionalizacion = DB::table('empresas')->where('etapa', '=', 'Internacionalización')->count();
+$nota=Empresa::avg('nota');
+
+
+
+$idea = DB::table('empresas')->where('etapa', '=', '1')->where('deleted_at','=',NULL)->count();
+$semilla = DB::table('empresas')->where('etapa', '=', '2')->where('deleted_at','=',NULL)->count();
+$temprana = DB::table('empresas')->where('etapa', '=', '3')->where('deleted_at','=',NULL)->count();
+$expansion = DB::table('empresas')->where('etapa', '=', '4')->where('deleted_at','=',NULL)->count();
+$internacionalizacion = DB::table('empresas')->where('etapa', '=', '5')->where('deleted_at','=',NULL)->count();
+$retorno = DB::table('empresas')->where('etapa', '=', '6')->where('deleted_at','=',NULL)->count();
+
+
+
 $empresas = DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->get();
 $test = DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->pluck('test');
- $nota=DB::table('empresas')->where('user_id', '=',$id)->where('deleted_at','=',NULL)->pluck('nota');
  $etapas=DB::table('empresas')->where('user_id', '=',$id)->where('deleted_at','=',NULL)->pluck('etapa');
+if(empty($etapas)) {
         $etapa=DB::table('etapas')->where('id','=',$etapas[0])->pluck('Nombre');
+}
 
 
 
 
 
-return view('home', compact('questions', 'users', 'quizzes', 'average','idea','semilla','expansion','temprana','internacionalizacion','usuario','etapa','empresas','test','nota'));
+
+return view('home', compact('questions', 'users', 'quizzes', 'average','idea','semilla','expansion','temprana','retorno','internacionalizacion','usuario','etapa','empresas','test','nota'));
 }
 }

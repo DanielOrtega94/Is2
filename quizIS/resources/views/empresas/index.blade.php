@@ -1,9 +1,12 @@
 @extends('layouts.app')
 @section('content')
 <h3 class="page-title">@lang('quickadmin.empresa.title')</h3>
-<p>
+
+<!--<p>
     <a href="{{ route('empresas.create') }}" class="btn btn-success">@lang('quickadmin.add_new')</a>
 </p>
+-->
+
 <div class="panel panel-default">
     <div class="panel-heading">
         @lang('quickadmin.list')

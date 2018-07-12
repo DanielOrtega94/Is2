@@ -22,7 +22,7 @@
 
 
                     <div class="col-md-3 text-center">
-                        <h1>{{ number_format($average, 2) }} / 10</h1>
+                        <h1>{{ number_format($nota, 2) }} / 7</h1>
                         @lang('quickadmin.home.promedio')
                     </div>
                 </div>
@@ -52,6 +52,10 @@
                     <div class="col-md-5 text-center">
                         <h1>{{ $internacionalizacion }}</h1>
                         Internacionalizacion
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <h1>{{ $retorno }}</h1>
+                        Retorno/declive
                     </div>
                 </div>
             </div>
