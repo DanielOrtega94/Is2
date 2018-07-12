@@ -122,7 +122,7 @@
                 }
             }
 
-            var html = "<form action='tests/select/" + id + "' method='post'><div class='panel-heading'><h4>ENHORABUENA<br>Tu proyecto se encuentra en la etapa : " + etapa + ".</h4><br><button class='btn btn-success' onclick='location.href={{route('tests.select')}}'>Realizar Diagnóstico</button></div></form>";
+            var html = "<form action='tests/select/" + id + "' method='post'><input type='hidden' name='_token' value='{{ csrf_token() }}'><div class='panel-heading'><h4>ENHORABUENA<br>Tu proyecto se encuentra en la etapa : " + etapa + ".</h4><br><button class='btn btn-success' onclick='location.href={{route('tests.select',["+id+"])}}'>Realizar Diagnóstico</button></div></form>";
 
             document.getElementById("panelpls").innerHTML = html;
 
