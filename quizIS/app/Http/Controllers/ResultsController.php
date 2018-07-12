@@ -36,7 +36,7 @@ class ResultsController extends Controller
         $empresas = DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->get();
         $nota=DB::table('empresas')->where('user_id', '=',$id)->where('deleted_at','=',NULL)->pluck('nota');
         $etapas=DB::table('empresas')->where('user_id', '=',$id)->where('deleted_at','=',NULL)->pluck('etapa');
-        if(empty($etapas)) {
+        if(!empty($etapas)) {
         $etapa=DB::table('etapas')->where('id','=',$etapas[0])->pluck('Nombre');
         }
         else{

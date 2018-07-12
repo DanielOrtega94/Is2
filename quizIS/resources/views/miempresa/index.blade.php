@@ -5,13 +5,13 @@
 <p>
     <a href="{{ route('miempresa.create') }}" class="btn btn-success">@lang('quickadmin.add_new')</a>
 </p>
-@endif
+@else
 <div class="panel panel-default">
     <div class="panel-heading">
         @lang('quickadmin.list')
     </div>
     <div class="panel-body">
-        <table class="table table-bordered table-striped {{ count($empresas) > 0 ? 'datatable' : '' }} dt-select">
+        <table class="table table-bordered table-striped dt-select">
             <thead>
                 <tr>
                     <th style="text-align:center;"><input type="checkbox" id="select-all" /></th>
@@ -58,6 +58,7 @@
         </table>
     </div>
 </div>
+@endif
 @stop
 @section('javascript')
 <script>

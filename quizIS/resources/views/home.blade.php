@@ -75,10 +75,6 @@
                         Tu Nota es
                         <h1>{{ $nota[0] }}</h1>
                     </div>
-                    <div class="col-md-3 text-center">
-                        Tu etapa es
-                        <h1>{{ $etapa[0] }}</h1>
-                    </div>
                 </div>
             </div>
         </div>

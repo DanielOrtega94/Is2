@@ -67,18 +67,18 @@
             </div>
 
     <div class="panel-body">
-        <table class="table table-bordered table-striped {{ count($results) > 0 ? 'datatable' : '' }}">
+        <table class="table table-bordered table-striped ">
             <thead>
                 <tr>
                     
-                    <th>@lang('quickadmin.results.fields.user')</th>
-                    <th>@lang('quickadmin.results.fields.date')</th>
-                    <th>Result</th>
+                    <th>Empresa</th>
+                    <th>Fecha</th>
+                    <th>Resultado</th>
                     <th>&nbsp;</th>
                 </tr>
             </thead>
             <tbody>
-                @if (count($results) > 0)
+                @if ($results)
                 @foreach ($results as $result)
                 <tr>
                   
