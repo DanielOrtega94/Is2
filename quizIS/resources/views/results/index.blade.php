@@ -53,6 +53,7 @@
     <div class="panel-heading">
         @lang('quickadmin.list')
     </div>
+    @if($nota[0] != 0)
          <div class="panel-body">
                 <div class="row">
                     <div class="col-md-3 text-center">
@@ -65,7 +66,7 @@
                     </div>
                 </div>
             </div>
-
+    @endif
     <div class="panel-body">
         <table class="table table-bordered table-striped ">
             <thead>
