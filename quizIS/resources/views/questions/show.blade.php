@@ -12,9 +12,9 @@
             <div class="col-md-6">
                 <table class="table table-bordered table-striped">
                     <tr><th>@lang('quickadmin.questions.fields.etapa')</th>
-                    <td>{{ $question->etapa->idetapa }}</td></tr>
+                    <td>{{ $question->etapa_id[0] }}</td></tr>
                     <tr><th>@lang('Topico')</th>
-                    <td>{{ $question->topic->title or '' }}</td></tr>
+                    <td>{{ $question->topic_id[0] or '' }}</td>
                     
                     <tr><th>@lang('quickadmin.questions.fields.question-text')</th>
                     <td>{!! $question->question_text !!}</td></tr>

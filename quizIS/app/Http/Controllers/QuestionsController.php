@@ -166,6 +166,10 @@ class QuestionsController extends Controller
         ];
 
         $question = Question::findOrFail($id);
+        $nombre_topico=$question['topic_id'];    
+        $nombre_etapa=$question['etapa_id'];
+        $question['etapa_id']= DB::table('etapas')->where('id','=',$nombre_etapa)->select('Nombre')->get()->pluck('Nombre');
+        $question['topic_id']= DB::table('topics')->select('title')->where('id','=',$nombre_etapa)->get()->pluck('title');
         $questions_options=DB::table('questions_options')->where('question_id','=',$id)->where('deleted_at','=',NULL)->get();
 
         return view('questions.show', compact('question','questions_options') + $relations);
