@@ -201,6 +201,24 @@ class PreguntaSeeder extends Seeder
                 'created_at' => new DateTime('now'),
                'updated_at'=> new DateTime,
            ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 4,
+                'option' => 'Si',
+                 'puntaje' => 5,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
+              DB::table('questions_options')->insert([
+                
+                'question_id' => 4,
+                'option' => 'No',
+                 'puntaje' => 2,
+                 'correct' => 0,
+                'created_at' => new DateTime('now'),
+               'updated_at'=> new DateTime,
+           ]);
                DB::table('questions_options')->insert([
                 
                 'question_id' => 6,
