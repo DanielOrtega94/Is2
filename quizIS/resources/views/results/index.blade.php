@@ -29,7 +29,7 @@
                     <td>{{ $result->etapa}}</td>
                     <td>{{ $result->nota }}</td>
                     <td>
-                        <a href="{{ route('results.show',[$result->test->id]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.view')</a>
+                        <a href="{{ route('results.show',[$result->test]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.view')</a>
                     </td>
                 </tr>
                 @endforeach
