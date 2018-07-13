@@ -2,9 +2,9 @@
 @section('content')
 <h3 class="page-title">@lang('quickadmin.questions.title')</h3>
 <p>
+
     <a href="{{ route('questions.create') }}" class="btn btn-success">@lang('quickadmin.add_new')</a>
-    <a href="{{ route('tests.index') }}" class="btn btn-success">Revisar test</a>
-    <a href="{{config('app.url')}}/report?tablename=questions&colnames=(id,question_text,ponderation,answer_explanation)" class="btn btn-success">   Generar Reporte</a>
+    <a href="{{config('app.url')}}/report/questions" class="btn btn-success">Generar Reporte</a>
 </p>
 <div class="panel panel-default">
     <div class="panel-heading">

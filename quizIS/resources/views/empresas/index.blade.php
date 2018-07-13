@@ -4,7 +4,9 @@
 <p>
    
 
-    <a href="{{config('app.url')}}/report?tablename=empresas&colnames=(Nombre,correo,direccion,nota)" class="btn btn-success">Generar Reporte</a>
+    <a href="{{config('app.url')}}/report/empresas" class="btn btn-success">Generar Reporte</a>
+
+    <!--<a href="{{config('app.url')}}/report?tablename=empresas&colnames=(Nombre,correo,direccion,nota)" class="btn btn-success">Generar Reporte</a>-->
 </p>
 
 
@@ -24,8 +26,6 @@
                     <th>@lang('quickadmin.empresa.fields.telefono')</th>
                     <th>@lang('quickadmin.empresa.fields.etapa')</th>
                     <th>@lang('quickadmin.empresa.fields.nota')</th>
-                    
-                    
                     <th>&nbsp;</th>
                 </tr>
             </thead>

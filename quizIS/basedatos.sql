@@ -279,7 +279,7 @@ COLLATE = utf8_unicode_ci;
 DROP TABLE IF EXISTS `laraquiz`.`empresas` ;
 
 CREATE TABLE IF NOT EXISTS `laraquiz`.`empresas` (
-  `id` INT UNSIGNED NULL AUTO_INCREMENT,
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `Nombre` VARCHAR(45) NOT NULL,
   `user_id` INT UNSIGNED NOT NULL,
   `correo` VARCHAR(45) NULL,

@@ -66,6 +66,7 @@ return [
 	'questions' => [
 		'title' => 'Preguntas',
 		'fields' => [
+			'id' => 'ID',
 			'topic' => 'Topicos',
 			'question-text' => 'Texto Pregunta',
 			'code-snippet' => 'Code snippet',

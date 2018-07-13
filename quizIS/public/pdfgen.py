@@ -104,8 +104,6 @@ columnNames = {'id':'ID',
 				'question_text': 'Pregunta'}
 
 def createReport(tableName, columns, reportName=None, nupagesize = letter):
-	print tableName
-	print columns
 	sum = 0
 	for column in columns:
 		if column in columnSizes:
@@ -170,9 +168,8 @@ if args.tablename is not None and args.colnames is not None:
 	args.colnames = args.colnames.replace(')', '\']')
 	args.colnames = args.colnames.replace(',', '\',\'')
 
-	#print args.colnames,args.tablename
+	print args.colnames
 
 	createReport(args.tablename, ast.literal_eval(args.colnames))
-	pass
 else:
 	createReport('empresas', ['id','Nombre', 'correo', 'nota'])
