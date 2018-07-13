@@ -35,7 +35,7 @@
                     <td>{{ $empresa->direccion }}</td>
                     <td>{{ $empresa->telefono }}</td>
                     <td>{{ $empresa->etapa }}</td>
-                    <td>{{ $empresa->nota }}</td>  
+                    <td>{{ $empresa->nota }}/7</td>  
                     <td>
                         <a href="{{ route('miempresa.show',[$empresa->id]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.view')</a>
                         <a href="{{ route('miempresa.edit',[$empresa->id]) }}" class="btn btn-xs btn-info">@lang('quickadmin.edit')</a>
