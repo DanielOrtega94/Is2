@@ -79,8 +79,6 @@ class Result extends Model
     {
         return $this->belongsTo(User::class, 'user_id')->withTrashed();
     }
-
-    
     
     public function question()
     {

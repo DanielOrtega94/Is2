@@ -56,9 +56,10 @@ class ResultsController extends Controller
         $emp_id = $aux_emp->pluck('id');
 
         $test = Test::where('id',$emp_id[0]);
+        $test1 = Test::where('user_id',$id);
+        $test_id = $test1->pluck('id');
 
         $fecha_test = $test->pluck('created_at');
-        $test_id = $test->pluck('id');
         $nombre_empresa = $aux_emp->pluck('Nombre');
         $nota=DB::table('empresas')->where('user_id', '=',$id)->where('deleted_at','=',NULL)->pluck('nota');
         $etapas=DB::table('empresas')->where('user_id', '=',$id)->where('deleted_at','=',NULL)->pluck('etapa');

@@ -71,7 +71,7 @@
             <thead>
                 <tr>
                     
-                    <th>Empresa</th>
+                    <th>Empresa{{$test_id}}</th>
                     <th>Fecha</th>
                     <th>Resultado</th>
                     <th>&nbsp;</th>
@@ -86,7 +86,7 @@
                     <td>{{ $fecha_test[0] or '' }}</td>
                     <td>{{ $nota[0] }}</td>
                     <td>
-                        <a href="{{ route('results.show',[$test_id]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.view')</a>
+                        <a href="{{ route('results.show',[$test_id[0]]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.view')</a>
                     </td>
                 </tr>
                 @else

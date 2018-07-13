@@ -23,7 +23,7 @@ class Test extends Model
         Test::observe(new \App\Observers\UserActionsObserver);
     }
 
-    public function user()
+  public function user()
     {
         return $this->belongsTo(User::class, 'user_id');
     }
