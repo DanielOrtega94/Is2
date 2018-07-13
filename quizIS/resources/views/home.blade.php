@@ -69,10 +69,6 @@
                         Tu Nota Actual es
                         <h1>{{ $nota_empresa[0] }}</h1>
                     </div>
-                    <div class="col-md-6 text-center">
-                        Tu Etapa Actual es
-                        <h1>{{ $etapa_empresa[0] }}</h1>
-                    </div>
                 </div>
             </div>
         </div>

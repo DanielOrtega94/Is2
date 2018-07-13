@@ -49,8 +49,6 @@ $empresas = DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at
 $nota_empresa = $empresas->pluck('nota');
 
 $test = DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->pluck('test');
-$etapas=DB::table('empresas')->where('user_id', '=',$id)->where('deleted_at','=',NULL)->pluck('etapa');
-$etapa_empresa = DB::table('etapas')->where('id','=',$etapas[0])->pluck('Nombre');
 
 
 
