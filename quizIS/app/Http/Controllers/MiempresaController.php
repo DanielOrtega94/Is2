@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Empresa;
+use App\Etapa;
 use Auth;
 use DB;
 use App\Http\Requests\StoreEmpresaRequest;
@@ -18,12 +19,17 @@ class MiempresaController extends Controller
      */
     public function index()
     {
+
+         
         $id = Auth::user()->getId();
        
          $empresas = DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->get();
          $etapas=DB::table('empresas')->where('user_id', '=',$id)->where('deleted_at','=',NULL)->pluck('etapa');
-        if(!empty($etapas)) {
+          $c_etapas=count(DB::table('empresas')->where('user_id', '=',$id)->where('deleted_at','=',NULL)->pluck('etapa'));
+
+        if($c_etapas) {
         $etapa=DB::table('etapas')->where('id','=',$etapas[0])->pluck('Nombre');
+       // $etapa=Etapa::where('id',$etapas[0])->select('Nombre')->get();
         }
         else{
 

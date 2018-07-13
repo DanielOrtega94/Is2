@@ -34,7 +34,7 @@
                     <td>{{ $empresa->correo }}</td>
                     <td>{{ $empresa->direccion }}</td>
                     <td>{{ $empresa->telefono }}</td>   
-                    <td>{{ $etapa }}</td>
+                    <td>{{ $etapa}}</td>
                
 
                     @if(!empty($empresa->nota))
@@ -45,12 +45,7 @@
                     <td>
                         <a href="{{ route('miempresa.show',[$empresa->id]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.view')</a>
                         <a href="{{ route('miempresa.edit',[$empresa->id]) }}" class="btn btn-xs btn-info">@lang('quickadmin.edit')</a>
-                        {!! Form::open(array(
-                        'style' => 'display: inline-block;',
-                        'method' => 'DELETE',
-                        'onsubmit' => "return confirm('".trans("quickadmin.are_you_sure")."');",
-                        'route' => ['miempresa.destroy', $empresa->id])) !!}
-                        {!! Form::submit(trans('quickadmin.delete'), array('class' => 'btn btn-xs btn-danger')) !!}
+                     
                         {!! Form::close() !!}
                     </td>
                 </tr>

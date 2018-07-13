@@ -26,8 +26,10 @@ class TestsController extends Controller
      */
     public function index()
     {
+         
       $etapas = Etapa::all();
       $id = Auth::user()->getId();
+      $test=count(DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->where('test',1)->select('test')->get());  
 
 //      $empresa = Empresa::whereNull('deleted_at')->where('user_id','=',$id)->get();
       $empresa = Empresa::whereNull("deleted_at")->where('user_id',$id)->get();
@@ -37,7 +39,7 @@ class TestsController extends Controller
         }
 
 
-    return view('tests.index', compact('etapas','questions','empresa','id'));
+    return view('tests.index', compact('etapas','questions','empresa','id','test'));
        
     }
 
@@ -104,6 +106,7 @@ class TestsController extends Controller
     public function store(Request $request)
     {
         $result = 0;
+
 
         $empresa = DB::table('empresas')->where('user_id','=',Auth::id())->pluck('id');
 

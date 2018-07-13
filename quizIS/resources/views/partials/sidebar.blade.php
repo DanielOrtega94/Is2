@@ -13,7 +13,7 @@
             </li>
            
 
-            @if( Auth::user()->isAdmin()==False and $id = Auth::user()->getId() and count(DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->get())>0)
+            @if( Auth::user()->isAdmin()==False and $id = Auth::user()->getId() and count(DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->where('test',1)->select('test')->get())==1)
             <li class="{{ $request->segment(1) == 'tests' ? 'active' : '' }}">
                 <a href="{{ route('tests.index') }}">
                     <i class="fa fa-graduation-cap"></i>
@@ -24,7 +24,7 @@
 
 
 
-    @if( Auth::user()->isAdmin()==False and $id = Auth::user()->getId() and count(DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->where('test',1)->get())>1)
+    @if( Auth::user()->isAdmin()==False and $id = Auth::user()->getId() and count(DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->where('test',1)->get())>0)
             <li class="{{ $request->segment(1) == 'results' ? 'active' : '' }}">
                 <a href="{{ route('results.index') }}">
                     <i class="fa fa-check"></i>
@@ -32,7 +32,7 @@
                 </a>
             </li>
             @elseif(Auth::user()->isAdmin()==TRUE)
-             count(DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->get())>0)
+            
             <li class="{{ $request->segment(1) == 'results' ? 'active' : '' }}">
                 <a href="{{ route('results.index') }}">
                     <i class="fa fa-check"></i>
