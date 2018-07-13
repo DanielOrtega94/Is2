@@ -111,7 +111,7 @@ class TestsController extends Controller
         $empresa = DB::table('empresas')->where('user_id','=',Auth::id())->pluck('id');
 
         $test = Test::create([
-            'user_id' => $empresa[0],
+            'user_id' => Auth::id(),
             'result'  => $result,
         ]);
 
@@ -139,7 +139,7 @@ class TestsController extends Controller
                 $result+= QuestionsOption::find($request->input('answers.'.$question))->puntaje;
             }
             TestAnswer::create([
-                'user_id'     => $empresa[0],
+                'user_id'     => Auth::id(),
                 'test_id'     => $test->id,
                 'question_id' => $question,
                 'option_id'   => $request->input('answers.'.$question),

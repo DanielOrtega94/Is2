@@ -26,6 +26,8 @@
                    <!-- <td>{{ $fechas->created_at or '' }}</td>-->
                     <td>{{ $result->etapa}}</td>
                     <td>{{ $result->nota }}</td>
+                   
+
                     <td>
                         <a href="{{ route('results.show',[$result->test]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.view')</a>
                     </td>

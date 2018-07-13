@@ -26,7 +26,7 @@ class ResultsController extends Controller
     public function index()
     {
         
-        $results = Empresa::whereNull('deleted_at')->get();
+        $results = Empresa::whereNull('deleted_at')->where('user_id','<>',1)->get();
 
 
         if (!Auth::user()->isAdmin()) {
