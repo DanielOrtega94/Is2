@@ -34,11 +34,17 @@ class ResultsController extends Controller
         }
 
         foreach ($results as $key) {
-            $aux = DB::table('etapas')->where('id','=',$key->etapa)->pluck('Nombre');
-            $key->etapa = $aux[0];
-
-            $aux2 = DB::table('tests')->where('user_id','=',$key->id)->pluck('id');
-            $key->test = $aux2[0];
+            $c_aux = count(DB::table('etapas')->where('id','=',$key->etapa)->pluck('Nombre'));
+            if($c_aux){
+                $aux = DB::table('etapas')->where('id','=',$key->etapa)->pluck('Nombre');
+                $key->etapa = $aux[0];
+            }
+            $c_aux2 = count(DB::table('tests')->where('user_id','=',$key->id)->pluck('id'));
+            if($c_aux2){
+                $aux2 = DB::table('tests')->where('user_id','=',$key->id)->pluck('id');
+                $key->test = $aux2[0];
+            }
+            
 
 
         }

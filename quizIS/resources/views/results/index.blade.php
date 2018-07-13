@@ -10,9 +10,7 @@
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    
                     <th>@lang('quickadmin.results.fields.user')</th>
-                    
                     <th>Etapa</th>
                     <th>Nota</th>
                     <th>&nbsp;</th>
