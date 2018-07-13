@@ -22,7 +22,9 @@
             </li>
             @endif
 
-    @if( Auth::user()->isAdmin()==False and $id = Auth::user()->getId() and count(DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->get())>0)
+
+
+    @if( Auth::user()->isAdmin()==False and $id = Auth::user()->getId() and count(DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->where('test',1)->get())>1)
             <li class="{{ $request->segment(1) == 'results' ? 'active' : '' }}">
                 <a href="{{ route('results.index') }}">
                     <i class="fa fa-check"></i>
@@ -39,6 +41,10 @@
             </li>
             @endif
       
+
+
+
+
               @if( Auth::user()->isAdmin()==False and $id = Auth::user()->getId() and count(DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->get())>0)
             <li class="{{ $request->segment(1) == 'miempresa' ? 'active' : '' }}">
                 <a href="{{ route('miempresa.index') }}">
