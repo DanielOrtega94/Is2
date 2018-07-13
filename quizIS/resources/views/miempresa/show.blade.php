@@ -23,7 +23,7 @@
                 <td>{{ $empresa->direccion }}</td>
                 <td>{{ $empresa->telefono }}</td>
                 <td>{{ $empresa->etapa }}</td>
-                <td>{{ $empresa->telefono }}</td>
+                <td>{{ $empresa->nota }}</td>
             </table>
         </div>
     </div>

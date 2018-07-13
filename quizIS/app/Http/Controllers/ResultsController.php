@@ -25,15 +25,32 @@ class ResultsController extends Controller
      */
     public function index()
     {
-        $fechas = Test::all()->load('user');
-        $results = Empresa::whereNull('deleted_at');
+        
+        $results = Empresa::whereNull('deleted_at')->get();
+
 
         if (!Auth::user()->isAdmin()) {
             $results = $results->where('user_id', '=', Auth::id());
         }
+
+        foreach ($results as $key) {
+            $aux = DB::table('etapas')->where('id','=',$key->etapa)->pluck('Nombre');
+            $key->etapa = $aux[0];
+
+            
+        }
         $id = Auth::user()->getId();
 
-        $empresas = DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->get();
+        $empresas = DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->pluck('id');
+        $aux_emp = DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL);
+
+        $emp_id = $aux_emp->pluck('id');
+
+        $test = Test::where('id',$emp_id[0]);
+
+        $fecha_test = $test->pluck('created_at');
+        $test_id = $test->pluck('id');
+        $nombre_empresa = $aux_emp->pluck('Nombre');
         $nota=DB::table('empresas')->where('user_id', '=',$id)->where('deleted_at','=',NULL)->pluck('nota');
         $etapas=DB::table('empresas')->where('user_id', '=',$id)->where('deleted_at','=',NULL)->pluck('etapa');
         if(!empty($etapas)) {
@@ -43,7 +60,7 @@ class ResultsController extends Controller
 
         $etapa=["Vacio",""];
         }
-        return view('results.index', compact('results','id','empresas','etapa','nota','fechas'));
+        return view('results.index', compact('results','test','id','empresas','etapa','nota','tests','fecha_test','test_id','nombre_empresa'));
     }
 
     /**

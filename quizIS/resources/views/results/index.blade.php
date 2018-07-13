@@ -13,24 +13,23 @@
                     
                     <th>@lang('quickadmin.results.fields.user')</th>
                     
-                      <th<th>Etapa</th>
-                    <th>@lang('quickadmin.results.fields.user')</th>
+                    <th>Etapa</th>
                     <th>Nota</th>
                     <th>&nbsp;</th>
                 </tr>
             </thead>
             <tbody>
-                @if ($results)
+                @if(count($results)>0)
                 @foreach ($results as $result)
                 <tr>
                     @if(Auth::user()->isAdmin())
-                    <td>{{ $result->user->name or '' }} ({{ $result->user->email or '' }})</td>
+                    <td>{{ $result->user->name }} ({{ $result->user->email or '' }})</td>
                     @endif
                    <!-- <td>{{ $fechas->created_at or '' }}</td>-->
-                    <td>{{ $result->nota }}/7</td>
-                    <td>{{ $result->nota }}/7</td>
+                    <td>{{ $result->etapa}}</td>
+                    <td>{{ $result->nota }}</td>
                     <td>
-                        <a href="{{ route('results.show',[$result->id]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.view')</a>
+                        <a href="{{ route('results.show',[$result->test->id]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.view')</a>
                     </td>
                 </tr>
                 @endforeach
@@ -46,7 +45,7 @@
 </div>
 
 
-@elseif(Auth::user()->isAdmin()==FALSE and count($empresas)>0)
+@elseif (Auth::user()->isAdmin()==FALSE and count($empresas)>0)
 
 <h3 class="page-title">@lang('quickadmin.results.title')</h3>
 <div class="panel panel-default">
@@ -79,19 +78,17 @@
                 </tr>
             </thead>
             <tbody>
-                @if ($results)
-                @foreach ($results as $result)
+                @if(count($empresas)>0)
                 <tr>
                   
-                    <td>{{ $result->user->name or '' }} ({{ $result->user->email or '' }})</td>
-                  
-                    <td>{{ $result->created_at or '' }}</td>
-                    <td>{{ $result->result }}/7</td>
+                    <td>{{ $nombre_empresa[0] or '' }}</td>
+                    
+                    <td>{{ $fecha_test[0] or '' }}</td>
+                    <td>{{ $nota[0] }}</td>
                     <td>
-                        <a href="{{ route('results.show',[$result->id]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.view')</a>
+                        <a href="{{ route('results.show',[$test_id]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.view')</a>
                     </td>
                 </tr>
-                @endforeach
                 @else
                 <tr>
                     <td colspan="6">@lang('quickadmin.no_entries_in_table')</td>
