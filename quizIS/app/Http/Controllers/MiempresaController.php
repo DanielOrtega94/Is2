@@ -21,9 +21,16 @@ class MiempresaController extends Controller
         $id = Auth::user()->getId();
        
          $empresas = DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->get();
+         $etapas=DB::table('empresas')->where('user_id', '=',$id)->where('deleted_at','=',NULL)->pluck('etapa');
+        if(!empty($etapas)) {
+        $etapa=DB::table('etapas')->where('id','=',$etapas[0])->pluck('Nombre');
+        }
+        else{
 
+        $etapa=["Vacio",""];
+        }
 
-        return view('miempresa.index',compact('empresas'));
+        return view('miempresa.index',compact('empresas','etapa'));
     }
 
     /**

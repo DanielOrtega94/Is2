@@ -22,15 +22,24 @@
             </li>
             @endif
 
-    
+    @if( Auth::user()->isAdmin()==False and $id = Auth::user()->getId() and count(DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->get())>0)
             <li class="{{ $request->segment(1) == 'results' ? 'active' : '' }}">
                 <a href="{{ route('results.index') }}">
                     <i class="fa fa-check"></i>
                     <span class="title">@lang('quickadmin.results.title')</span>
                 </a>
             </li>
+            @elseif(Auth::user()->isAdmin()==TRUE)
+             count(DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->get())>0)
+            <li class="{{ $request->segment(1) == 'results' ? 'active' : '' }}">
+                <a href="{{ route('results.index') }}">
+                    <i class="fa fa-check"></i>
+                    <span class="title">@lang('quickadmin.results.title')</span>
+                </a>
+            </li>
+            @endif
       
-            @if(Auth::user()->isAdmin()==FALSE)
+              @if( Auth::user()->isAdmin()==False and $id = Auth::user()->getId() and count(DB::table('empresas')->where('user_id', '=', $id)->where('deleted_at','=',NULL)->get())>0)
             <li class="{{ $request->segment(1) == 'miempresa' ? 'active' : '' }}">
                 <a href="{{ route('miempresa.index') }}">
                     <i class="fa fa-building" aria-hidden="true"

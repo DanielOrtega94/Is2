@@ -28,4 +28,9 @@ class Empresa extends Model
         return $this->belongsTo(User::class, 'user_id')->withTrashed();
     }
 
+     public function getId()
+    {
+  return $this->id;
+        }
+
 }
