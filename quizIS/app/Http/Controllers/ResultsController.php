@@ -37,7 +37,10 @@ class ResultsController extends Controller
             $aux = DB::table('etapas')->where('id','=',$key->etapa)->pluck('Nombre');
             $key->etapa = $aux[0];
 
-            
+            $aux2 = DB::table('tests')->where('user_id','=',$key->id)->pluck('id');
+            $key->test = $aux2[0];
+
+
         }
         $id = Auth::user()->getId();
 
