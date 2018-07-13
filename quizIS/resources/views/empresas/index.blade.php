@@ -46,13 +46,7 @@
                     <td>
                         <a href="{{ route('empresas.show',[$empresa->id]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.view')</a>
                         <a href="{{ route('empresas.edit',[$empresa->id]) }}" class="btn btn-xs btn-info">@lang('quickadmin.edit')</a>
-                        {!! Form::open(array(
-                        'style' => 'display: inline-block;',
-                        'method' => 'DELETE',
-                        'onsubmit' => "return confirm('".trans("quickadmin.are_you_sure")."');",
-                        'route' => ['empresas.destroy', $empresa->id])) !!}
-                        {!! Form::submit(trans('quickadmin.delete'), array('class' => 'btn btn-xs btn-danger')) !!}
-                        {!! Form::close() !!}
+                        
                     </td>
                 </tr>
                 @endforeach
