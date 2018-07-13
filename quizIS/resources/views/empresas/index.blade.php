@@ -1,11 +1,13 @@
 @extends('layouts.app')
 @section('content')
 <h3 class="page-title">@lang('quickadmin.empresa.title')</h3>
-
-<!--<p>
+<p>
     <a href="{{ route('empresas.create') }}" class="btn btn-success">@lang('quickadmin.add_new')</a>
+
+    <a href="{{config('app.url')}}/report?tablename=empresas&colnames=(Nombre,correo,direccion,nota)" class="btn btn-success">Generar Reporte</a>
 </p>
--->
+
+
 
 <div class="panel panel-default">
     <div class="panel-heading">
