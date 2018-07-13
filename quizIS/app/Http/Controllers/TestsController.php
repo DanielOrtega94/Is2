@@ -28,14 +28,16 @@ class TestsController extends Controller
     {
       $etapas = Etapa::all();
       $id = Auth::user()->getId();
-      $empresa = Empresa::findOrFail($id);
+
+//      $empresa = Empresa::whereNull('deleted_at')->where('user_id','=',$id)->get();
+      $empresa = Empresa::whereNull("deleted_at")->where('user_id',$id)->get();
       $questions =  DB::table('questions')->where('inicial','=',1)->get();
         foreach ($questions as &$question) {
             $question->options = QuestionsOption::where('question_id', $question->id)->get();
         }
 
 
-    return view('tests.index', compact('etapas','questions'));
+    return view('tests.index', compact('etapas','questions','empresa','id'));
        
     }
 
@@ -80,13 +82,14 @@ class TestsController extends Controller
     public function select($id){
 
       $user = Auth::user()->getId();
-      $empresa = Empresa::findOrFail($user);
       $questions = DB::table('questions')->where('etapa_id','=',$id)->get();
        foreach ($questions as &$question) {
             $question->options = QuestionsOption::where('question_id', $question->id)->get();
         }
+       
+        $empresa =DB::table('empresas')->whereNull('deleted_at')->where('user_id','=',$user);
         $empresa->update(['etapa'=>$id]);
-
+           
     return view('tests.select', compact('dimensiones','empresa','questions'));
     }   
 
@@ -110,7 +113,7 @@ class TestsController extends Controller
         ]);
 
         $puntaje_maximo = 0; 
-        $etapa = DB::table('empresas')->where('user_id','=',Auth::id())->select('etapa')->pluck('etapa');
+        $etapa = DB::table('empresas')->whereNull('deleted_at')->where('user_id','=',Auth::id())->select('etapa')->pluck('etapa');
         $questions  = DB::table('questions')->where('etapa_id','=',$etapa[0])->get();
         foreach ($questions as $q) {
             $puntaje_max = DB::table('questions_options')->where('question_id','=',$q->id)->select(DB::raw('max(puntaje) as puntaje'))->pluck('puntaje');

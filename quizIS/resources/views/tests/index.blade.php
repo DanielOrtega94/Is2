@@ -5,7 +5,11 @@
 
     <div class="panel panel-default" id="panelpls">
         <div class="panel-heading">
-            <h4>Conteste las siguientes preguntas para conocer en que etapa se encuentra su proyecto.</h4>
+
+            <h4>Conteste las siguientes preguntas para conocer en que etapa se encuentra su proyecto.
+{{$empresa}}
+
+            </h4>
         </div>
         
         <div class="panel-body">

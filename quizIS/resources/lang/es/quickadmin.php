@@ -24,7 +24,7 @@ return [
 	],
 
     'test' => [
-        'new' => 'Iniciar Quiz',
+        'new' => 'Iniciar Diagnostico',
     ],
 
 	'roles' => [
