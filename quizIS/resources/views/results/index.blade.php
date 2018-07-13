@@ -71,7 +71,7 @@
             <thead>
                 <tr>
                     
-                    <th>Empresa{{$test_id}}</th>
+                    <th>Empresa</th>
                     <th>Fecha</th>
                     <th>Resultado</th>
                     <th>&nbsp;</th>
