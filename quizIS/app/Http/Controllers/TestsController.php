@@ -151,7 +151,7 @@ class TestsController extends Controller
         $final = round( $result, 1, PHP_ROUND_HALF_UP);
 
         $test->update(['result' => $final]);
-        $empresa = DB::table('empresas')->where('user_id','=',Auth::id())->update(['test'=>1 , 'nota' => $final]);
+        $empresa = DB::table('empresas')->whereNull('deleted_at')->where('user_id','=',Auth::id())->update(['test'=>1 , 'nota' => $final]);
 
         return redirect()->route('results.show', [$test->id]);
     }
